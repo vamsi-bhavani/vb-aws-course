@@ -1,1 +1,1 @@
-# vb-aws-course
+# aws-course Syllabus
