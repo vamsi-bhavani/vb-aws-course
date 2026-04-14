@@ -283,22 +283,25 @@ Suppose you have a Linux EC2 instance with an existing EBS volume (`vol-0abcdef1
    - Connect to your Linux instance via SSH.
 
 3. **Resize the File System:**
+
 🔹 For EXT4:
+```bash
 sudo resize2fs /dev/nvme1n1
+````
+
 🔹 For XFS:
-sudo xfs_growfs /
 
-👉 If mounted elsewhere:
-
+```bash
 sudo xfs_growfs /data
-
+```
 ⚠️ Key rule:
 
-ext4 → works on device
-xfs → works on mount point
+* ext4 → works on device
+* xfs → works on mount point
 
 5. **Verify:**
-   - Check with `df -h` to confirm the file system now shows the increased space.
+
+   * Check with `df -h` to confirm the file system now shows the increased space.
 
 -----
 ### Lab Session - Attach an EBS Volume to a Windows EC2 Instance
