@@ -218,14 +218,14 @@ Here are the condensed steps to format and mount an attached EBS volume on a Lin
 
 3. **Check for existing filesystem:**
    ```bash
-   sudo file -s /dev/xvdf
+   sudo file -s /dev/nvme1n1
    ```
 
 4. **Format the Volume (if not formatted):**
 
 - If the volume has no filesystem, create one:
      ```bash
-     sudo mkfs -t xfs /dev/xvdf
+     sudo mkfs -t xfs /dev/nvme1n1
      ```
    - If `mkfs.xfs` is not found, install XFS tools:
      ```bash
@@ -242,7 +242,7 @@ Here are the condensed steps to format and mount an attached EBS volume on a Lin
 
 6. **Mount the volume:**
    ```bash
-   sudo mount /dev/xvdf /data
+   sudo mount /dev/nvme1n1 /data
    ```
 
 7. **Persist mount across reboots:**
