@@ -26,19 +26,7 @@
 5. **Management and Access:** You can manage snapshots through the AWS Management Console, AWS Command Line Interface (CLI), or AWS SDKs. Snapshots can be tagged, copied, shared, and deleted as per your requirements.
 
 ----
-### Lab Session - Creation of a Snapshot from an EC2 Instance
 
-1. **Sign in to AWS Management Console:**
-   - Navigate to the EC2 Dashboard at [AWS Management Console](https://console.aws.amazon.com/ec2/).
-
-2. **Select EC2 Instance:**
-   - Locate the EC2 instance for which you want to create a snapshot.
-
-3. **Create Snapshot:**
-   - Right-click on the instance, select "Create Image (AMI)."
-   - Provide a name and description for the snapshot.
-   - Click "Create Image" to initiate the snapshot creation process.
-----
 ### Lab Session - Creation of a Snapshot from an EBS Volume
 
 1. **Sign in to AWS Management Console:**
