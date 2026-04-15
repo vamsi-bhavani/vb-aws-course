@@ -81,7 +81,7 @@
      cp (needs recursive)
      ```bash
      aws s3 cp ./data s3://my-bucket/data --recursive
-    ```
+     ```
 ----
 ### S3 Versioning and Enabling it
 
