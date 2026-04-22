@@ -429,7 +429,6 @@ Please assist in diagnosing and resolving this issue, as it is preventing us fro
 **Common Use Cases:**
 1. **Retrieve Instance Information**: Such as instance ID, IP address, AMI ID, or region.
 2. **Dynamic Configuration**: Use metadata to configure the instance dynamically based on its environment.
-3. **IAM Role Credentials**: Access temporary security credentials for AWS services when using an instance profile (IAM role).
 
 **Example Metadata Categories:**
 - `ami-id`: AMI ID of the instance.
@@ -481,7 +480,6 @@ TAG_VALUE="ldev-eks-$INSTANCE_ID"
 # Set the tag for the instance
 aws ec2 create-tags --resources $INSTANCE_ID --tags Key=Name,Value=$TAG_VALUE --region $REGION
 ```
-
 ---
 
 ### Key Differences
