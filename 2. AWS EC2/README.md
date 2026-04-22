@@ -417,50 +417,33 @@ Please assist in diagnosing and resolving this issue, as it is preventing us fro
 
 ### Metadata and User Data in Amazon EC2
 
-#### Metadata
+### **Metadata**
 
-**Definition**: EC2 instance metadata provides dynamic information about an instance at runtime, such as instance ID, instance type, public IP address, and more.
+**What is it?**
+- **Metadata** refers to instance-specific information that is available from within the instance itself.
+- AWS provides this through a special metadata service accessible at `http://169.254.169.254/latest/meta-data/`.
 
-- **Access**: Metadata is accessible from within the instance using a special endpoint:
-  - Endpoint URL: `http://169.254.169.254/latest/meta-data/`
-  - Example: `http://169.254.169.254/latest/meta-data/instance-id`
+**How does it work?**
+- Metadata is not passed to the instance like userdata; instead, the instance retrieves it by making HTTP requests to the metadata service.
 
-- **Usage**:
-  - Retrieving instance-specific information dynamically.
-  - Automation scripts that need to fetch details about the instance at runtime.
-  - Monitoring and debugging tools that require current instance metadata.
+**Common Use Cases:**
+1. **Retrieve Instance Information**: Such as instance ID, IP address, AMI ID, or region.
+2. **Dynamic Configuration**: Use metadata to configure the instance dynamically based on its environment.
+3. **IAM Role Credentials**: Access temporary security credentials for AWS services when using an instance profile (IAM role).
 
-#### User Data
+**Example Metadata Categories:**
+- `ami-id`: AMI ID of the instance.
+- `instance-id`: Unique ID of the instance.
+- `public-ipv4`: Public IP address assigned to the instance.
+- `security-groups`: Security groups associated with the instance.
 
-**Definition**: User data allows you to pass custom startup scripts or configuration to your EC2 instances during launch.
+**Retrieving Metadata Example:**
+To get the instance ID:
+```bash
+curl http://169.254.169.254/latest/meta-data/instance-id
+```
 
-- **Purpose**:
-  - **Automation**: Configure instances automatically with software installs, updates, or specific configurations.
-  - **Initialization**: Run custom scripts or commands upon instance startup.
-  - **Setup**: Customize instance behavior based on launch parameters.
-
-- **Format**: User data is provided as plain text or base64-encoded data, attached to the instance at launch.
-
-- **Access**:
-  - Specify user data through the AWS Management Console, CLI, or SDKs when launching instances.
-  - Retrieve and execute user data scripts inside the instance during initialization.
-
-#### Example Use Cases
-
-1. **Metadata**:
-   - **Instance Identification**: Fetching instance ID for logging or monitoring purposes.
-   - **Networking**: Retrieving public or private IP addresses dynamically.
-   - **Instance Type**: Determining hardware characteristics for workload optimization.
-
-2. **User Data**:
-   - **Configuration Management**: Installing and configuring software packages (e.g., Apache, MySQL) upon instance launch.
-   - **Custom Scripts**: Running scripts for setup tasks like environment variable configuration or application deployment.
-   - **Automation**: Initializing instances with predefined configurations to streamline deployment processes.
-
-#### Security Considerations
-
-- **Metadata**: Accessible only from within the instance, ensuring security of instance-specific information.
-- **User Data**: Should not contain sensitive information unless encrypted or securely managed, as it's readable during instance initialization.
+---
 
 ### **Userdata**
 
@@ -497,34 +480,6 @@ TAG_VALUE="ldev-eks-$INSTANCE_ID"
 
 # Set the tag for the instance
 aws ec2 create-tags --resources $INSTANCE_ID --tags Key=Name,Value=$TAG_VALUE --region $REGION
-```
-
----
-
-### **Metadata**
-
-**What is it?**
-- **Metadata** refers to instance-specific information that is available from within the instance itself.
-- AWS provides this through a special metadata service accessible at `http://169.254.169.254/latest/meta-data/`.
-
-**How does it work?**
-- Metadata is not passed to the instance like userdata; instead, the instance retrieves it by making HTTP requests to the metadata service.
-
-**Common Use Cases:**
-1. **Retrieve Instance Information**: Such as instance ID, IP address, AMI ID, or region.
-2. **Dynamic Configuration**: Use metadata to configure the instance dynamically based on its environment.
-3. **IAM Role Credentials**: Access temporary security credentials for AWS services when using an instance profile (IAM role).
-
-**Example Metadata Categories:**
-- `ami-id`: AMI ID of the instance.
-- `instance-id`: Unique ID of the instance.
-- `public-ipv4`: Public IP address assigned to the instance.
-- `security-groups`: Security groups associated with the instance.
-
-**Retrieving Metadata Example:**
-To get the instance ID:
-```bash
-curl http://169.254.169.254/latest/meta-data/instance-id
 ```
 
 ---
