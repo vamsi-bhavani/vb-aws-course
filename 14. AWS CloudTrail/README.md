@@ -68,8 +68,6 @@
 - `DeleteObject`: Indicates the deletion of an object in an S3 bucket.
 - `ModifyInstanceAttribute`: Indicates the modification of attributes for an EC2 instance.
 - `PutObject`: Indicates the putting of an object into an S3 bucket.
-- `DescribeInstances`: Indicates the description of EC2 instances.
-
 ----
 ### Lab Session - Configuring AWS CloudTrail to Send Logs to S3
 
