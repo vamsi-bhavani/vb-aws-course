@@ -30,9 +30,6 @@
 6. **Trail Configuration**:
    - You can configure CloudTrail to create a trail, which is a configuration enabling CloudTrail to deliver log files to an S3 bucket, CloudWatch Logs, or both.
 
-7. **Log File Integrity**:
-   - CloudTrail log files are cryptographically signed and stored in a specified S3 bucket, helping ensure their integrity and providing an additional layer of security.
-
 ### Use Cases for AWS CloudTrail:
 
 - **Security and Compliance Auditing**: Helps meet compliance requirements by providing an audit trail of API calls and changes to resources.
