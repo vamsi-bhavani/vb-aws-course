@@ -62,9 +62,6 @@ Combination of public and private clouds, allowing data and applications to be s
    - Enables users to launch AWS resources into a virtual network.
    - Users can control their virtual networking environment, including selection of IP address range, creation of subnets, and configuration of route tables and gateways.
 
-
-  ![IAAS  - Moole Muralidhara Reddy.png](https://github.com/vamsi-bhavani/vb-aws-course/blob/main/Day-1/images/Infrastructure%20as%20a%20Service%20-%20%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
-
 2. **Platform as a Service (PaaS):**
 
 - PaaS provides users with a platform for building and deploying their own applications without having to worry about managing the underlying infrastructure.
@@ -88,8 +85,6 @@ Combination of public and private clouds, allowing data and applications to be s
    - A highly scalable, high-performance container orchestration service that supports Docker containers.
    - Allows users to easily run, stop, and manage containers on a cluster of EC2 instances.
 
-![PAAS  - Moole Muralidhara Reddy.png](https://github.com/vamsi-bhavani/vb-aws-course/blob/main/Day-1/images/Platform%20as%20a%20Service-%20%20Moole%20Muralidhara%20Reddy-%20Tech%20World%20with%20Murali.png)
-
 
 3. **Software as a Service (SaaS):**
 - SaaS provides users with access to fully managed software applications and services that are hosted by a third-party provider.
@@ -112,7 +107,6 @@ Combination of public and private clouds, allowing data and applications to be s
 4. **Amazon WorkMail:**
    - A secure, managed business email and calendaring service.
    - Compatible with existing email clients and offers strong security features to protect data.
-![SAAS  - Moole Muralidhara Reddy.png](https://github.com/vamsi-bhavani/vb-aws-course/blob/main/Day-1/images/Software%20as%20a%20Service-%20%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
 
 ----
 ### What is AWS?
