@@ -62,7 +62,7 @@ Combination of public and private clouds, allowing data and applications to be s
    - Enables users to launch AWS resources into a virtual network.
    - Users can control their virtual networking environment, including selection of IP address range, creation of subnets, and configuration of route tables and gateways.
 
-2. **Platform as a Service (PaaS):**
+2.**Platform as a Service (PaaS):**
 
 - PaaS provides users with a platform for building and deploying their own applications without having to worry about managing the underlying infrastructure.
 - PaaS providers typically offer pre-configured software, tools, and application programming interfaces (APIs) that make it easier for developers to build, test, and deploy their applications.
