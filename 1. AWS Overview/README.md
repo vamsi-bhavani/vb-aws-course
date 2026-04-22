@@ -86,7 +86,7 @@ Combination of public and private clouds, allowing data and applications to be s
    - Allows users to easily run, stop, and manage containers on a cluster of EC2 instances.
 
 
-3. **Software as a Service (SaaS):**
+3.**Software as a Service (SaaS):**
 - SaaS provides users with access to fully managed software applications and services that are hosted by a third-party provider.
 - Users typically access SaaS applications through a web browser or mobile app, and the provider is responsible for maintaining and updating the software.
 
