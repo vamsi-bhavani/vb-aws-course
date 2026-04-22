@@ -239,19 +239,32 @@ AWS Elastic IP (EIP) is a static, public IP address that can be allocated to you
 2. **Disaster Recovery**
    - Quickly remap an EIP to a standby instance in case of failure, minimizing downtime and ensuring business continuity.
 
-3. **Dynamic DNS**
-   - Use an EIP with dynamic DNS services to maintain consistent access to applications even when underlying instances change.
+### **Important Considerations**
 
-#### Important Considerations:
+* **Cost**
 
-- **Cost**
-  - While EIPs themselves are free, AWS charges you if an EIP is associated with a stopped instance or not associated with any instance.
+  * **All public IPv4 addresses in AWS (including Elastic IPs) are now charged**, whether they are:
 
-- **Limits**
-  - AWS limits the number of EIPs you can have per region. You can request an increase if necessary.
+    * Associated with a running instance
+    * Associated with a stopped instance
+    * Or not associated with any resource
+  * AWS charges per hour for each public IPv4 address.
 
-- **Best Practices**
-  - Use EIPs sparingly and release them when no longer needed to avoid unnecessary charges.
+* **Limits**
+
+  * AWS still limits the number of Elastic IPs per region (default is usually 5).
+  * You can request a quota increase if needed.
+
+* **Best Practices**
+
+  * Use Elastic IPs only when necessary.
+  * Release unused Elastic IPs to avoid ongoing charges.
+  * Consider using alternatives like:
+    * AWS Load Balancers
+    * Private IPs + NAT Gateway
+    * DNS (Route 53) instead of static IPs where possible
+
+---
 
 #### How to Allocate and Associate an EIP:
 
@@ -304,20 +317,6 @@ A security group acts as a virtual firewall for your EC2 instances to control in
   - Add, edit, or remove inbound and outbound rules as necessary.
   - Changes are automatically applied to all associated instances.
 
-#### Example Use Cases:
-
-1. **Web Servers**:
-   - Allow inbound HTTP (port 80) and HTTPS (port 443) traffic from anywhere.
-   - Allow SSH (port 22) access only from a specific IP address or range.
-
-2. **Database Servers**:
-   - Allow inbound traffic only from specific application servers.
-   - Restrict outbound traffic to limit external connections.
-
-3. **Application Servers**:
-   - Allow inbound traffic on specific ports required by the application.
-   - Allow outbound traffic to databases and other services.
-
 #### Important Considerations:
 
 - **Stateful Nature**:
@@ -333,7 +332,6 @@ By effectively managing security groups, you can enhance the security of your AW
 
 ----
 ### Spot Instances, On-Demand Instances, Savings Plans, Reserved Instances, Dedicated Hosts, Scheduled Instances, Capacity Reservations
-
 
 Amazon EC2 offers a variety of instance purchasing options to help you optimize costs and meet your specific workload requirements. Here are the main options:
 
