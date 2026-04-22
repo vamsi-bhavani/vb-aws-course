@@ -111,37 +111,6 @@
    - Click **Create trail** to create your CloudTrail and start sending logs to the specified S3 bucket.
 
 ----
-### Deleting CloudWatch Alarms
-
-1. **Using the AWS Management Console:**
-   - Sign in to the AWS Management Console.
-   - Navigate to the **CloudWatch console** at [https://console.aws.amazon.com/cloudwatch/](https://console.aws.amazon.com/cloudwatch/).
-   - In the left-hand navigation pane, click on **Alarms**.
-   - Select the alarm(s) you want to delete.
-   - Click **Actions** and then **Delete**.
-   - Confirm the deletion.
-----
-### Deleting CloudWatch Logs
-
-1. **Using the AWS Management Console:**
-   - Sign in to the AWS Management Console.
-   - Navigate to the **CloudWatch console** at [https://console.aws.amazon.com/cloudwatch/](https://console.aws.amazon.com/cloudwatch/).
-   - In the left-hand navigation pane, click on **Logs**.
-   - Select the log group(s) you want to delete.
-   - Click **Actions** and then **Delete log group**.
-   - Confirm the deletion.
-----
-
-### Deleting CloudWatch Dashboards
-
-1. **Using the AWS Management Console:**
-   - Sign in to the AWS Management Console.
-   - Navigate to the **CloudWatch console** at [https://console.aws.amazon.com/cloudwatch/](https://console.aws.amazon.com/cloudwatch/).
-   - In the left-hand navigation pane, click on **Dashboards**.
-   - Select the dashboard(s) you want to delete.
-   - Click **Actions** and then **Delete**.
-   - Confirm the deletion.
-----
 ### Lab Session - Deletion of CloudTrail
 
 1. **Sign in to AWS Management Console:**
