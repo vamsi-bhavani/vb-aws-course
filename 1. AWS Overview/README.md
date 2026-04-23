@@ -125,7 +125,6 @@ Combination of public and private clouds, allowing data and applications to be s
 
 **Disadvantages of AWS**
 
-* **Complexity:** The large number of services can be overwhelming for beginners.
 * **Cost Management:** Costs can increase quickly without proper monitoring and optimization.
 * **Data Transfer Costs:** Charges apply for transferring data between regions or outside AWS.
 * **Vendor Lock-in:** Migrating away from AWS can be difficult once deeply integrated.
