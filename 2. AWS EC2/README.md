@@ -391,7 +391,7 @@ Each of these options provides different pricing models and flexibility, allowin
 ----
 ### Lab Session - Opening a Support Ticket with AWS
 
-### Example Description for an EBS Issue: Unable to Mount in Linux Server
+### Example Description for an EBS Issue: Unable to mount the EBS volume to the EC2 instance.
 
 Here is an example of a detailed description you might provide for an issue where you are unable to mount an EBS volume on a Linux server:
 
