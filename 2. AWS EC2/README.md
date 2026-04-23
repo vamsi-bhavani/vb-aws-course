@@ -289,14 +289,11 @@ A security group acts as a virtual firewall for your EC2 instances to control in
    - **Inbound Rules**: Control the incoming traffic to your instance.
    - **Outbound Rules**: Control the outgoing traffic from your instance.
 
-2. **Default Security Group**
-   - If you don't specify a security group when you launch an instance, Amazon EC2 uses the default security group.
-
-3. **Flexible Rule Management**
+2. **Flexible Rule Management**
    - You can add, modify, or remove rules in a security group at any time.
    - New and modified rules are automatically applied to all instances associated with the security group.
 
-4. **Multiple Security Groups**
+3. **Multiple Security Groups**
    - You can specify one or more security groups when you launch an instance.
    - Amazon EC2 evaluates all rules from all security groups associated with an instance to decide whether to allow traffic.
 
@@ -397,8 +394,6 @@ Each of these options provides different pricing models and flexibility, allowin
 ### Example Description for an EBS Issue: Unable to Mount in Linux Server
 
 Here is an example of a detailed description you might provide for an issue where you are unable to mount an EBS volume on a Linux server:
-
----
 
 **Service**: Elastic Block Store (EBS)  
 **Category**: Volume Availability  
