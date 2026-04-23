@@ -112,7 +112,8 @@ Combination of public and private clouds, allowing data and applications to be s
 
 **What is AWS?**
 
-AWS (Amazon Web Services) is a cloud computing platform by Amazon that provides on-demand access to services like virtual servers (EC2), storage (S3), databases, networking, and machine learning tools. Instead of owning physical hardware, businesses can run applications and store data on AWS infrastructure over the internet.
+- AWS (Amazon Web Services) is a cloud computing platform by Amazon that provides on-demand access to services like virtual servers (EC2), storage (S3), databases, networking, and machine learning tools.
+- Instead of owning physical hardware, businesses can run applications and store data on AWS infrastructure over the internet.
 
 **Advantages of AWS**
 
