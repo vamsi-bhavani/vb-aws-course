@@ -415,11 +415,8 @@ Please assist in diagnosing and resolving this issue, as it is preventing us fro
 
 ----
 
-### Metadata and User Data in Amazon EC2
+### What is Metadata in Amazon EC2
 
-### **Metadata**
-
-**What is it?**
 - **Metadata** refers to instance-specific information that is available from within the instance itself.
 - AWS provides this through a special metadata service accessible at `http://169.254.169.254/latest/meta-data/`.
 
@@ -443,10 +440,8 @@ curl http://169.254.169.254/latest/meta-data/instance-id
 ```
 
 ---
+### What is bUser Data in Amazon EC2
 
-### **Userdata**
-
-**What is it?**
 - **Userdata** refers to a script or configuration passed to an EC2 instance during its launch.
 - It is often used to perform automated actions when an instance starts for the first time.
 
