@@ -6,21 +6,58 @@
 | **Website**              | https://www.vamsibhavani.in              |
 
 
+## What is AWS EBS?
 
-### What is AWS EBS?
+Amazon Elastic Block Store (**EBS**) is a high-performance **block storage** service designed for use with Amazon EC2 instances.
 
-- Amazon Elastic Block Store (EBS) is a high-performance block storage service designed for use with Amazon EC2 instances.
-- It provides persistent block-level storage volumes that can be attached to EC2 instances.
-- EBS volumes are highly available and reliable storage volumes that can be used for databases, file systems, or any other application requiring durable storage.
+It provides **persistent block-level storage volumes** that can be attached to EC2 instances and used like a traditional hard drive.
 
-### Key Features of AWS EBS
+EBS is ideal for workloads requiring **low latency and consistent performance**, such as:
 
-- **Elasticity**: Volumes can be dynamically scaled in size and performance to meet changing application demands.
-- **Durability**: Data is automatically replicated within an Availability Zone to protect against component failures.
-- **Snapshotting**: Point-in-time snapshots enable backup and recovery of EBS volumes.
-- **Encryption**: Volumes can be encrypted using AWS-managed or customer-managed keys for enhanced security.
-- **Availability**: Available in all AWS regions, allowing attachment to instances within the same region.
+* Databases
+* File systems
+* Enterprise applications
+* Boot volumes for EC2 instances
 
+## Is EBS only for EC2?
+
+Yes — EBS volumes can be **directly attached only to EC2 instances**.
+
+However, several AWS managed services use EBS internally behind the scenes, such as:
+
+* Amazon RDS for database storage
+* Amazon EKS worker nodes using EBS-backed storage
+* AWS Elastic Beanstalk environments running on EC2 + EBS
+
+So while direct attachment is only for EC2, EBS is widely used across AWS services.
+
+## Key Features of AWS EBS
+
+### 1. Persistent Storage
+
+Data remains available even after the EC2 instance is stopped or restarted.
+
+### 2. Elasticity
+
+You can resize volumes and adjust performance without recreating them.
+
+### 3. Snapshots
+
+Point-in-time backups can be taken and stored in Amazon S3.
+
+### 4. Encryption
+
+Supports encryption using AWS-managed or customer-managed KMS keys.
+
+### 5. High Availability
+
+Volumes are replicated within the same Availability Zone to protect against hardware failure.
+
+### 6. AZ-Specific Attachment
+
+An EBS volume can only be attached to an EC2 instance in the **same Availability Zone**.
+
+---
 
 ### Types of AWS EBS Volumes
 
