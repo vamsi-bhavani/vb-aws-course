@@ -476,6 +476,43 @@ aws ec2 create-tags --resources $INSTANCE_ID --tags Key=Name,Value=$TAG_VALUE --
 ```
 ---
 
+On a Linux EC2 instance (launched via Amazon EC2), user data is usually executed by **cloud-init**, so the easiest way to check if it ran is to look at the logs and status.
+
+### 1. Check cloud-init status
+
+Run:
+
+```bash
+cloud-init status
+```
+
+* `status: done` → user data likely ran successfully
+* `status: running` → still in progress
+* `status: error` → something failed
+
+---
+
+### 2. Check cloud-init logs (most important)
+
+These logs show exactly what happened:
+
+```bash
+sudo cat /var/log/cloud-init-output.log
+```
+
+* This file contains **stdout/stderr from your user data script**
+* Look for your commands, errors, or custom echo output
+
+Also check:
+
+```bash
+sudo cat /var/log/cloud-init.log
+```
+
+* More detailed internal logs
+
+---
+
 ### Key Differences
 
 | Aspect          | Userdata                                 | Metadata                                    |
