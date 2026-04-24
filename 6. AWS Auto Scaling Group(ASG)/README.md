@@ -50,19 +50,19 @@ Let's say you have a web application that needs to handle a large number of user
    - By using Launch Configurations with AWS Auto Scaling, you can save money by only running the instances needed to handle your application's demand.
    - Helps to reduce costs and optimize your infrastructure spending.
 
-### Drawbacks of a Launch Configuration
+### Drawbacks of Launch Configuration
 
-1. **Limited Flexibility**:
-   - Once a Launch Configuration is created, it cannot be modified.
-   - Any changes require creating a new Launch Configuration.
+**1. Cannot Be Modified**
+Once a Launch Configuration is created, it cannot be edited.
+If you need to change the AMI, instance type, security groups, or user data, you must create a new Launch Configuration.
 
-2. **Configuration Drift**:
-   - Over time, Launch Configurations may become outdated as new software or security updates are released.
-   - This can result in configuration drift, where instances launched using an old Launch Configuration are not up-to-date and may not function as intended.
+**2. Limited Features**
+Launch Configurations support fewer features compared to Launch Templates.
+For example, they do not support advanced options like multiple instance types, T2/T3 Unlimited, versioning.
 
-3. **Time-Consuming Setup**:
-   - Creating a Launch Configuration can be time-consuming, especially if you have complex requirements for your instances.
-   - This can be a challenge if you need to quickly launch a new instance or update your configuration.
+**3. Legacy Service**
+AWS recommends using Launch Templates instead of Launch Configurations because Launch Configurations are older and have limited functionality.
+
 ----
 ### Lab Session - Creation of an AWS Launch Configuration
 
