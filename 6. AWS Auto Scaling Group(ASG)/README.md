@@ -115,7 +115,7 @@ An AWS Launch Template is a newer version of Launch Configuration that provides 
 | Feature              | Launch Template                              | Launch Configuration                        |
 |----------------------|----------------------------------------------|---------------------------------------------|
 | **Standardization**  | Ensures instances are consistent and correctly configured | Ensures instances are consistent and correctly configured |
-| **Flexibility**      | - Supports multiple versions<br>- Can be updated over time<br>- Allows custom scripts<br>- Supports multiple instance types and sizes | - Once created, cannot be modified<br>- No support for custom scripts or multiple instance types and sizes |
+| **Flexibility**      | - Supports multiple versions<br>- Can be updated over time<br>- Supports multiple instance types and sizes | - Once created, cannot be modified<br>- No support for multiple instance types and sizes |
 | **Automation**       | Can be used with AWS Auto Scaling Groups for automatic scaling | Can be used with AWS Auto Scaling Groups for automatic scaling |
 | **Cost Savings**     | Optimizes infrastructure spending by running only necessary instances | Optimizes infrastructure spending by running only necessary instances |
 | **Versioning**       | Supports multiple versions for updates       | Does not support versioning                 |
