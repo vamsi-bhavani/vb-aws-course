@@ -22,12 +22,6 @@ An Auto Scaling Group (ASG) is a feature of AWS that automatically adjusts the n
 - An AWS Launch Configuration is a template containing essential information required to launch instances in your AWS Auto Scaling Group.
 - It includes details such as the instance type, AMI ID, security groups, and other launch parameters.
 
-#### Example Scenario:
-
-**Web Application Scaling During Peak Hours**
-
-Let's say you have a web application that needs to handle a large number of user requests during peak hours. To ensure the application can manage the increased load, you want to create an AWS Auto Scaling Group with a Launch Configuration.
-
 ### Benefits of a Launch Configuration
 
 1. **Standardization**:
