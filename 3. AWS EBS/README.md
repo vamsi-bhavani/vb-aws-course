@@ -70,7 +70,7 @@ Let's expand on each AWS EBS volume type with their description, performance cha
   - Designed for a wide range of transactional and interactive workloads.
 
 - **Performance:**
-  - Supports up to 16,000 IOPS.
+  - Supports up to 3000 IOPS.
   - Burstable performance capabilities for handling occasional spikes in workload.
 
 - **Use Cases:**
@@ -85,7 +85,7 @@ Let's expand on each AWS EBS volume type with their description, performance cha
   - Designed for applications requiring higher performance than gp2.
 
 - **Performance:**
-  - Supports up to 16,000 IOPS and 1000 MiB/s throughput.
+  - Supports up to 80000 IOPS and 2000 MiB/s throughput.
   - Provides consistent performance for a variety of workloads.
 
 - **Use Cases:**
@@ -100,7 +100,7 @@ Let's expand on each AWS EBS volume type with their description, performance cha
   - Offers the highest performance level among EBS volumes.
 
 - **Performance:**
-  - Provides up to 64,000 IOPS.
+  - Provides up to 25000 IOPS.
   - Allows users to specify IOPS requirements for their applications.
 
 - **Use Cases:**
@@ -115,7 +115,7 @@ Let's expand on each AWS EBS volume type with their description, performance cha
   - Cost-effective solution for throughput-intensive applications.
 
 - **Performance:**
-  - Provides up to 500 MiB/s throughput.
+  - Provides up to 40 MiB/s per TiB throughput.
   - Optimized for scenarios with large, sequential data access patterns.
 
 - **Use Cases:**
@@ -130,7 +130,7 @@ Let's expand on each AWS EBS volume type with their description, performance cha
   - Lower-cost option for data that doesn’t require frequent access.
 
 - **Performance:**
-  - Provides up to 250 MiB/s throughput.
+  - Provides up to 12 MiB/s per TiB throughput.
   - Suitable for scenarios where storage cost is the primary consideration.
 
 - **Use Cases:**
