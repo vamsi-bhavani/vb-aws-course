@@ -1,65 +1,73 @@
-# Setting up Customized VPC.
-![Lab - Setting up Customized VPC in telugu - Moole Muralidhara Reddy ](https://github.com/vamsi-bhavani/vb-aws-course/blob/main/10.%20AWS%20VPC%20Part%202/images/Day%20%2013-%20Lab%20-%20Setting%20up%20Customized%20VPC%20-%20Moole%20Muralidhara%20Reddy%20-%20vamsibhavani.png)
+# Creating an Infra VPC in AWS
 
-## Step 1: Create the AWS VPC
+![Lab - Setting up Customized VPC - Moole Muralidhara Reddy](https://github.com/vamsi-bhavani/vb-aws-course/blob/main/10.%20AWS%20VPC%20Part%202/images/Day%20%2013-%20Lab%20-%20Setting%20up%20Customized%20VPC%20-%20Moole%20Muralidhara%20Reddy%20-%20vamsibhavani.png)
+
+
+#### Step 1: Create the Infra VPC
 ```xml
-Name: Dev-VPC in US East (N. Virginia) us-east-1
-CIDR : 10.100.0.0/16
+Name: Infra-VPC in US East (N. Virginia) us-east-1
+CIDR : 10.70.0.0/16
 ```
-## Step 2: Create a 2 public subnets with
+#### Step 2: Create a 2 public subnets with
 ```xml
-CIDR :10.100.8.0/21
-Name: Dev-public-subnet-1a
+CIDR :10.70.8.0/21
+Name: Infra-public-subnet-1a
 
-CIDR :10.100.16.0/21
-Name: Dev-public-subnet-1b
-
-```
-## Step 3: Create a 2 private subnets with
-```xml
-CIDR :10.100.80.0/21
-Name: Dev-private-subnet-1a
-
-CIDR :10.100.88.0/21
-Name: Dev-private-subnet-1b
+CIDR :10.70.16.0/21
+Name: Infra-public-subnet-1b
 
 ```
-
-## Step 4: Create a 2 app subnets with
+#### Step 3: Create a 2 private subnets with
 ```xml
-CIDR :10.100.144.0/21
-Name: Dev-app-subnet-1a
+CIDR :10.70.80.0/21
+Name: Infra-private-subnet-1a
 
-CIDR :10.100.162.0/21
-Name: Dev-app-subnet-1b
-
-```
-## Step 4: Create a 2 data subnets with
-```xml
-CIDR :10.100.168.0/21
-Name: Dev-data-subnet-1a
-
-CIDR :10.100.176.0/21
-Name: Dev-data-subnet-1b
+CIDR :10.70.88.0/21
+Name: Infra-private-subnet-1b
 
 ```
 
-## Step 5: Create an internet gateway and attach to Dev-VPC
+#### Step 4: Create a 2 app subnets with
 ```xml
-Name: Dev-VPC-IGW
+CIDR :10.70.144.0/21
+Name: Infra-app-subnet-1a
+
+CIDR :10.70.162.0/21
+Name: Infra-app-subnet-1b
+
 ```
-## Step 6: Create a route table and name it Dev-VPC-Public-RouteTable and attach the public subnets to this RouteTable.
+#### Step 5: Create a 2 data subnets with
 ```xml
-Name: Dev-VPC-Public-RouteTable
+CIDR :10.70.168.0/21
+Name: Infra-data-subnet-1a
+
+CIDR :10.70.176.0/21
+Name: Infra-data-subnet-1b
+
 ```
 
-## Step 7: Create a route table and name it Dev-VPC-Private-RouteTable and attach the private,app,data subnets to this RouteTable.
-
+#### Step 6: Create an internet gateway and attach to Infra VPC
 ```xml
-Name: Dev-VPC-Private-RouteTable
+Name: Infra-VPC-IGW
+```
+#### Step 7: Create a route table and name it Infra-VPC-Public-RouteTable and attach the public subnets to this RouteTable.
+```xml
+Name: Infra-Public-RouteTable
 ```
 
-## Step 8: Add the Internet Gateway route to the Public RouteTable.
+#### Step 8: Create a route table and name it Infra-Private-RouteTable-us-east-1a, then attach the private, app, and data subnets in Availability Zone us-east-1a to this route table.
+
+```xml
+Name: Infra-Private-RouteTable-us-east-1a
+```
+
+#### Step 9: Create a route table and name it Infra-Private-RouteTable-us-east-1b, then attach the private, app, and data subnets in Availability Zone us-east-1b to this route table.
+
+```xml
+Name: Infra-Private-RouteTable-us-east-1b
+```
+
+#### Step 10: Add the Internet Gateway route to the Infra-Public-RouteTable
 
 ```xml
 Route Entry
@@ -67,8 +75,7 @@ Route Entry
 Destination : 0.0.0.0/0
 Target : Internet Gateway ID
 ```
+## Step 11: Launch the Linux EC2 instance in the Public Subnet.
+## Step 12: Connect to the Linux EC2 instance through Putty or SSH command.
 
-## Step 9: Launch the Linux EC2 instance in the Public Subnet.
-## Step 10: Connect to the Linux EC2 instance through Putty or SSH command.
-
-#### Congratulations! You have successfully set up the VPC.
+#### Congratulations! You have successfully set up the Infra VPC.
