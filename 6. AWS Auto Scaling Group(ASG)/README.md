@@ -82,7 +82,6 @@ An AWS Launch Template is a newer version of Launch Configuration that provides 
 
 2. **Flexibility**:
    - **Versioning**: Unlike Launch Configurations, Launch Templates allow for multiple versions, providing the ability to update templates as requirements change over time.
-   - **Custom Scripts**: You can use custom scripts to configure your instances.
    - **Multiple Instance Types**: Specify various instance types and sizes to meet different application needs.
 
 3. **Automation**:
