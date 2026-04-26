@@ -1,6 +1,6 @@
 # Creating an Infra VPC in AWS
 
-![Lab - Setting up Customized VPC - Moole Muralidhara Reddy](https://github.com/vamsi-bhavani/vb-aws-course/blob/main/10.%20AWS%20VPC%20Part%202/images/Day%20%2013-%20Lab%20-%20Setting%20up%20Customized%20VPC%20-%20Moole%20Muralidhara%20Reddy%20-%20vamsibhavani.png)
+![Lab - Setting up Customized VPC - Moole Muralidhara Reddy](https://github.com/vamsi-bhavani/vb-aws-course/blob/main/10.%20AWS%20VPC%20Part%202/images/Day%20%2013-%20Lab%20-%20Setting%20up%20Customized%20VPC%20-%20Moole%20Muralidhara%20Reddy%20-%20vamsibhavan.png)
 
 
 #### Step 1: Create the Infra VPC
