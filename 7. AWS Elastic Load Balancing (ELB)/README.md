@@ -74,13 +74,28 @@ A Listener is a process that checks for connection requests from clients and man
 
 AWS Application Load Balancer (ALB) operates at the application layer (Layer 7) and directs traffic based on URL routing rules, allowing multiple applications to be hosted on a single load balancer. It supports advanced routing, SSL termination, and content-based routing.
 
-### Benefits of an AWS Application Load Balancer
+### Benefits of AWS Application Load Balancer (ALB)
 
-1. **Content-Based Routing:** Routes traffic based on content of the request (e.g., URL path).
-2. **Host-Based Routing:** Routes traffic based on host headers.
-3. **Path-Based Routing:** Routes traffic based on URL paths.
-4. **WebSocket Support:** Supports WebSocket traffic.
-5. **Integrated with AWS WAF:** Provides protection against common web exploits and SQL injection.
+* Works at Application Layer (Layer 7): Operates at Layer 7 and makes routing decisions based on application-level information like URLs and hostnames.
+
+* Content-Based Routing: Routes traffic based on the content of the request (e.g., URL path).
+
+* Host-Based Routing: Routes traffic based on host headers (e.g., different domains pointing to different target groups).
+
+* Path-Based Routing: Routes traffic based on URL paths (e.g., `/api`, `/admin`, `/images`).
+
+* SSL/TLS Termination: Handles SSL certificates at the load balancer level, reducing encryption/decryption load on backend servers.
+
+* WebSocket Support: Supports long-lived WebSocket connections for real-time applications like chat apps and live dashboards.
+
+* Integrated with AWS WAF: Protects applications from common web attacks like SQL injection and cross-site scripting (XSS).
+
+* Multiple Applications on One Load Balancer: Allows multiple applications to run behind a single ALB using routing rules.
+
+* Better for Microservices and Containers: Works well with microservices architecture and integrates with services like ECS and EKS.
+
+* Health Checks: Continuously monitors backend targets and sends traffic only to healthy instances.
+  
 ----
 ### Lab Session - Creation of an Application Load Balancer
 
@@ -106,15 +121,31 @@ AWS Application Load Balancer (ALB) operates at the application layer (Layer 7) 
 ----
 ### What is an AWS Network Load Balancer?
 
-AWS Network Load Balancer (NLB) is a load balancing solution designed to handle high volumes of traffic with low latency. It operates at the transport layer (Layer 4) and is capable of handling millions of requests per second while maintaining ultra-low latencies.
+- AWS Amazon Web Services Network Load Balancer (NLB) is a high-performance load balancing service designed to handle very high volumes of traffic with ultra-low latency.
+- It operates at the Transport Layer (Layer 4) and routes traffic based on TCP, UDP, and TLS protocols.
+- It is capable of handling millions of requests per second while maintaining high performance and scalability.
 
-### Benefits of an AWS Network Load Balancer
+### Benefits of AWS Network Load Balancer (NLB)
 
-1. **High Throughput:** Handles millions of requests per second with ultra-low latencies.
-2. **Static IP:** Provides a static IP address per Availability Zone (AZ) for easy integration with applications.
-3. **TLS Termination:** Supports TLS termination for end-to-end encryption.
-4. **Target Group Support:** Routes traffic to target groups using IP addresses and ports.
-5. **Health Checks:** Performs health checks on targets to ensure only healthy targets receive traffic.
+* Works at Transport Layer (Layer 4): Operates at Layer 4 and routes traffic based on TCP, UDP, and TLS connections.
+
+* High Throughput: Handles millions of requests per second with ultra-low latency and high performance.
+
+* Static IP: Provides a static IP address for each Availability Zone, making integration with external systems easier.
+
+* TLS Termination: Supports TLS termination to handle secure encrypted traffic efficiently.
+
+* Target Group Support: Routes traffic to targets using IP addresses, EC2 instances, or ports for flexible backend management.
+
+* Health Checks: Continuously checks target health and sends traffic only to healthy targets.
+
+* Better for Real-Time Applications: Ideal for gaming, IoT, video streaming, and high-performance applications requiring fast response.
+
+* Preserves Source IP: Maintains the original client IP address, useful for security and application logging.
+
+* Highly Scalable: Automatically scales to handle sudden and large traffic spikes without performance issues.
+
+* Supports Multi-Protocol Traffic: Can handle both TCP and UDP traffic efficiently.
 ----
 ### Lab Session - Creation of an AWS Network Load Balancer
 
