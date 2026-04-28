@@ -5,17 +5,31 @@
 | **Name**                 | Moole Muralidhara Reddy                                                      |
 | **Website**              | https://www.vamsibhavani.in              |
 
-### What is AWS Elastic Load Balancing?
+## What is AWS Elastic Load Balancing (ELB)?
 
-AWS Elastic Load Balancing (ELB) automatically distributes incoming application traffic across multiple targets, such as EC2 instances, IP addresses, and Lambda functions, to ensure high availability and fault tolerance for your applications.
+AWS Amazon Web Services Elastic Load Balancing (ELB) automatically distributes incoming application traffic across multiple targets such as EC2 instances, IP addresses, containers, and Lambda functions to ensure high availability, fault tolerance, and better application performance.
 
-### Benefits of AWS Elastic Load Balancing
+ELB helps applications remain available by routing traffic only to healthy targets and balancing the load across multiple resources.
 
-1. **High Availability:** Distributes traffic across multiple instances or targets, reducing the risk of overloading any single resource.
-2. **Fault Tolerance:** Automatically routes traffic away from unhealthy targets to healthy ones.
-3. **Scalability:** Handles varying traffic loads by scaling resources up or down automatically.
-4. **Security:** Provides SSL/TLS termination to encrypt traffic and integration with AWS WAF for web application firewall protection.
+### Benefits of AWS Elastic Load Balancing (ELB)
+
+* **High Availability:** Distributes traffic across multiple instances or targets, reducing overload on a single resource.
+
+* **Fault Tolerance:** Automatically detects unhealthy targets and redirects traffic to healthy targets.
+
+* **Scalability:** Handles changing traffic loads by working with Auto Scaling to increase or decrease resources automatically.
+
+* **Security:** Supports SSL/TLS termination for encrypted traffic and integrates with AWS WAF for additional protection.
+
+* **Health Checks:** Continuously monitors target health and sends traffic only to healthy resources.
+
+* **Better Performance:** Improves application responsiveness by balancing traffic efficiently across backend targets.
+
+* **Multi-AZ Support:** Distributes traffic across multiple Availability Zones for better reliability and disaster recovery.
+
+
 ----
+
 ## What is an AWS Classic Load Balancer?
 
 AWS Amazon Web Services Classic Load Balancer (CLB) is the original load balancer service provided by AWS, mainly designed for applications running in the older EC2-Classic network. It supports both EC2-Classic and EC2-VPC platforms and can handle both Layer 4 (TCP) and Layer 7 (HTTP/HTTPS) traffic.
@@ -70,13 +84,18 @@ AWS Amazon Web Services Classic Load Balancer (CLB) is the original load balance
    - Select the Classic Load Balancer you want to delete.
    - Click on "Actions > Delete" and confirm the deletion.
 ----
-### What is an AWS Target Group?
 
-An AWS Target Group is used with Application Load Balancers and Network Load Balancers to route requests to one or more registered targets, such as EC2 instances, IP addresses, or Lambda functions,Application Load blancer based on routing rules.
+## What is an AWS Target Group?
 
-### What is a Listener?
+AWS Amazon Web Services Target Group is used with Application Load Balancer (ALB) and Network Load Balancer (NLB) to route incoming requests to one or more registered targets such as EC2 instances, IP addresses or Lambda functions based on routing rules.
 
-A Listener is a process that checks for connection requests from clients and manages traffic for one or more ports, forwarding requests to target groups associated with AWS load balancers based on rules defined for each listener.
+It helps the load balancer decide where to send traffic and performs health checks to ensure traffic goes only to healthy targets.
+
+## What is a Listener?
+
+A Listener is a process that checks for connection requests from clients using a specific protocol and port, such as HTTP:80 or HTTPS:443.
+
+It receives incoming traffic on the load balancer and forwards requests to the appropriate target group based on the rules configured for that listener.
 
 ### Lab Session - Creation of an AWS Target Group
 
