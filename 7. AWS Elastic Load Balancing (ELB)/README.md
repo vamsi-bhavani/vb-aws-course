@@ -16,16 +16,37 @@ AWS Elastic Load Balancing (ELB) automatically distributes incoming application 
 3. **Scalability:** Handles varying traffic loads by scaling resources up or down automatically.
 4. **Security:** Provides SSL/TLS termination to encrypt traffic and integration with AWS WAF for web application firewall protection.
 ----
-### What is an AWS Classic Load Balancer?
+## What is an AWS Classic Load Balancer?
 
-AWS Classic Load Balancer (CLB) is the original load balancer offering from AWS, primarily designed for applications that were built within the EC2-Classic network. It supports both EC2-Classic and EC2-VPC platforms.
+AWS Amazon Web Services Classic Load Balancer (CLB) is the original load balancer service provided by AWS, mainly designed for applications running in the older EC2-Classic network. It supports both EC2-Classic and EC2-VPC platforms and can handle both Layer 4 (TCP) and Layer 7 (HTTP/HTTPS) traffic.
 
-### Features of a Classic Load Balancer
+### Features of AWS Classic Load Balancer (CLB)
 
-1. **Layer 4 and Layer 7 Load Balancing:** Supports both TCP (Layer 4) and HTTP/HTTPS (Layer 7) traffic.
-2. **Sticky Sessions:** Supports session affinity, directing requests to the same instance.
-3. **Health Checks:** Monitors the health of registered instances and routes traffic only to healthy instances.
-4. **Cross-Zone Load Balancing:** Distributes traffic evenly across instances in multiple Availability Zones.
+* **Layer 4 and Layer 7 Load Balancing:** Supports both TCP (Layer 4) and HTTP/HTTPS (Layer 7) traffic.
+
+* **Sticky Sessions:** Supports session affinity by sending user requests to the same backend instance.
+
+* **Health Checks:** Continuously monitors registered instances and sends traffic only to healthy instances.
+
+* **Cross-Zone Load Balancing:** Distributes incoming traffic evenly across multiple Availability Zones.
+
+* **SSL Termination: **Handles SSL/TLS encryption and decryption at the load balancer level.
+
+### Drawbacks of AWS Classic Load Balancer (CLB)
+
+* **Limited Routing Features:** Does not support advanced routing like path-based or host-based routing.
+
+* **No Microservices Support:** Not suitable for modern microservices and container-based architectures.
+
+* **Lower Performance:** Less efficient compared to ALB and NLB for high-scale applications.
+
+* **Basic Protocol Support:** Limited support for modern protocols and advanced traffic handling.
+
+* **Legacy Service:** Considered an older generation service, and AWS recommends using ALB or NLB for new applications.
+
+* **Less Flexible Scaling:** Does not provide the same level of performance optimization as newer load balancers.
+
+* **Weak Integration:** Limited integration with modern AWS services compared to ALB and NLB.
 
 ----
 ### Lab Session - Creation of an AWS Classic Load Balancer
