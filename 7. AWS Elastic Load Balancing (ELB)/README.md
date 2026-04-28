@@ -7,7 +7,7 @@
 
 ### What is AWS Elastic Load Balancing?
 
-AWS Elastic Load Balancing (ELB) automatically distributes incoming application traffic across multiple targets, such as EC2 instances, containers, IP addresses, and Lambda functions, to ensure high availability and fault tolerance for your applications.
+AWS Elastic Load Balancing (ELB) automatically distributes incoming application traffic across multiple targets, such as EC2 instances, IP addresses, and Lambda functions, to ensure high availability and fault tolerance for your applications.
 
 ### Benefits of AWS Elastic Load Balancing
 
@@ -26,6 +26,7 @@ AWS Classic Load Balancer (CLB) is the original load balancer offering from AWS,
 2. **Sticky Sessions:** Supports session affinity, directing requests to the same instance.
 3. **Health Checks:** Monitors the health of registered instances and routes traffic only to healthy instances.
 4. **Cross-Zone Load Balancing:** Distributes traffic evenly across instances in multiple Availability Zones.
+
 ----
 ### Lab Session - Creation of an AWS Classic Load Balancer
 
@@ -50,7 +51,7 @@ AWS Classic Load Balancer (CLB) is the original load balancer offering from AWS,
 ----
 ### What is an AWS Target Group?
 
-An AWS Target Group is used with Application Load Balancers and Network Load Balancers to route requests to one or more registered targets, such as EC2 instances, IP addresses, or Lambda functions, based on routing rules.
+An AWS Target Group is used with Application Load Balancers and Network Load Balancers to route requests to one or more registered targets, such as EC2 instances, IP addresses, or Lambda functions,Application Load blancer based on routing rules.
 
 ### What is a Listener?
 
