@@ -55,7 +55,7 @@ Intra-region VPC peering refers to peering connections between VPCs within the s
 
 #### Use Cases:
 - **Microservices Architecture**: Different microservices running in separate VPCs within the same region can communicate securely and efficiently.
-- **Data Segregation**: Separate environments (e.g., development, testing, production) in different VPCs within the same region can interact when necessary.
+- **Data Segregation**: Separate environments (e.g., DEV, QA, UAT, PREPROD, PROD) in different VPCs within the same region can interact when necessary.
 
 ### Inter-Region VPC Peering
 Inter-region VPC peering refers to peering connections between VPCs in different AWS regions.
