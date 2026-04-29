@@ -250,9 +250,17 @@ When migrating workloads to the cloud, organizations typically follow one or mor
 ### **Step 25: Testing the Application**  
 - Validate the aplication whether the functionality is working as expected.
 
-**Note:** Once testing is complete, we will shut down the application on the AWS side. During the cutover, we will bring the application back up.
+### Migration to Other Environments**  
+- If everything is **stable**, replicate the same process for:  
+  - **TEST**  
+  - **QA**  
+  - **UAT**  
+  - **Pre-Prod**
+  - **PROD**  
 
-## Phase 4: Final Cutover to AWS: Cutover Plan & Go-Live Checklist
+**Note:** Once testing is complete for Prod, we will shut down the application on the AWS side. During the cutover, we will bring the application back up.
+
+## Phase 4: Final Cutover to AWS: Cutover Plan & Go-Live Checklist for Prod
 
 ### **Step 26: Schedule the Cutover Meeting**  
 - Based on the final discussion, a **cutover date** will be finalized.  
@@ -280,11 +288,3 @@ When migrating workloads to the cloud, organizations typically follow one or mor
 ### **Step 31: Rollback Plan (If Needed)**  
 - If **issues occur**, attempt to **fix them on demand**.  
 - If unresolved, **roll back the DNS endpoint** to the **on-premises** infrastructure.
-
-### **Step 32: Migration to Other Environments**  
-- If everything is **stable**, replicate the same process for:  
-  - **TEST**  
-  - **QA**  
-  - **UAT**  
-  - **Pre-Prod**
-  - **PROD**  
