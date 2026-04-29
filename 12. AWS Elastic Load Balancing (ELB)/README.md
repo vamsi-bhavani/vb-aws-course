@@ -215,7 +215,7 @@ AWS Application Load Balancer (ALB) operates at the application layer (Layer 7) 
 | **Use Case**                    | Ideal for HTTP/HTTPS traffic and advanced routing        | Ideal for TCP, UDP, and TLS traffic requiring high performance |
 | **Routing**                     | Supports advanced routing based on HTTP headers, paths, and hostnames | Routes traffic based on IP protocol data without inspection |
 | **Performance**                 | Suitable for applications requiring intelligent routing decisions | High performance, low latency required for real-time applications |
-| **Protocol Support**            | HTTP, HTTPS, WebSocket                                   | TCP, UDP, TLS                                            |
+| **Protocol Support**            | HTTP, HTTPS                                   | TCP, UDP, TLS                                            |
 | **SSL Termination**             | Supports SSL termination                                 | Supports SSL passthrough and SSL termination             |
 | **Target Type**                 | Can route to EC2 instances, IP addresses, Lambda functions | Can route to EC2 instances, IP addresses, and AWS PrivateLink endpoints |
 | **Health Checks**               | Supports health checks based on HTTP/HTTPS status codes and content | Supports health checks based on TCP connections and responses |
