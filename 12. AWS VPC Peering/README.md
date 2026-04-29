@@ -34,6 +34,7 @@
 
 ![VPC Peering Diagram  - Moole Muralidhara Reddy.png](https://github.com/vamsi-bhavani/vb-aws-course/blob/main/Day-15/images/Day%2015-VPC%20Peering%20Diagram%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
 
+----
 ### Types of VPC Peering
 
 1. **Intra-Account VPC Peering**:
@@ -44,10 +45,6 @@
   -  Inter-region VPC peering within the same AWS account
   -  Inter-region VPC peering within the different AWS account
 
-![Types of VPC Peering  - Moole Muralidhara Reddy.png](https://github.com/vamsi-bhavani/vb-aws-course/blob/main/Day-15/images/Day%2015-Types%20of%20VPC%20Peering%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
-
-
-----
 ### Intra-Region VPC Peering
 Intra-region VPC peering refers to peering connections between VPCs within the same AWS region.
 
