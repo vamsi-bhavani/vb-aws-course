@@ -161,7 +161,7 @@ AWS Application Load Balancer (ALB) operates at the application layer (Layer 7) 
 ----
 ### What is an AWS Network Load Balancer?
 
-- AWS Amazon Web Services Network Load Balancer (NLB) is a high-performance load balancing service designed to handle very high volumes of traffic with ultra-low latency.
+- AWS  Network Load Balancer (NLB) is a high-performance load balancing service designed to handle very high volumes of traffic with ultra-low latency.
 - It operates at the Transport Layer (Layer 4) and routes traffic based on TCP, UDP, and TLS protocols.
 - It is capable of handling millions of requests per second while maintaining high performance and scalability.
 
@@ -184,6 +184,7 @@ AWS Application Load Balancer (ALB) operates at the application layer (Layer 7) 
 * **Highly Scalable:** Automatically scales to handle sudden and large traffic spikes without performance issues.
 
 * **Supports Multi-Protocol Traffic:** Can handle both TCP and UDP traffic efficiently.
+  
 ----
 ### Lab Session - Creation of an AWS Network Load Balancer
 
