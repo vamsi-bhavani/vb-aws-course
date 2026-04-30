@@ -1,4 +1,4 @@
-**Subject**: Request to Add 100 GB EBS Volume to Prod Windows Server
+**Subject**: Request to Add 100 GB EBS Volume to Prod Windows DB Server
 
 **Hello DevOps Team,**
 
