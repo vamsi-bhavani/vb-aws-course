@@ -57,7 +57,7 @@
 
 2. **Install MySQL Client:**
    - SSH into the EC2 instance.
-   - Install MySQL client using `sudo yum install mysql` for Amazon Linux or `sudo apt-get install mysql-client` for Ubuntu.
+   - Install MySQL client using `sudo sudo dnf install mariadb105-server -y` for Amazon Linux 2023 or `sudo apt-get install mysql-client` for Ubuntu.
 
 3. **Connect to RDS MySQL:**
    - Use `mysql` command-line tool to connect to your RDS MySQL instance:
