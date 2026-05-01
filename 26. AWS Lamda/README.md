@@ -82,12 +82,15 @@ AWS Lambda also supports functions packaged as **container images** (up to 10 GB
 
 ### 🔹 Networking Constraints
 
-| Constraint                   | Description                                                      |
-|------------------------------|------------------------------------------------------------------|
-| **No public internet (VPC)** | Lambda in a private VPC needs a NAT Gateway to access the internet |
-| **ENI limitations**          | Elastic Network Interface allocation is limited in VPC setups    |
+1. No public internet (Private VPC)
+- Lambda functions in private subnets do not have internet access by default
+- Use NAT Gateway for external internet access
+- Use VPC Endpoints for accessing AWS services privately (preferred over NAT)
 
----
+2. ENI Limitations
+- Lambda creates Elastic Network Interfaces (ENIs) in VPC subnets
+- Limited by subnet IP range and AWS ENI quotas
+- High concurrency can lead to ENI exhaustion and execution failures
 
 ### 🔹 Other Considerations
 
