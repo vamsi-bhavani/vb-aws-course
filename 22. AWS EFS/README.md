@@ -50,7 +50,7 @@ AWS EFS stands for Amazon Elastic File System. It is a scalable, fully managed f
 
 4. **Container Storage:** Storing persistent data for containers managed by Kubernetes or ECS.
 
-5. **Database Backups:** Storing database backups and logs accessible by multiple instances.
+5. **Database Backups:** Storing database backups  accessible by multiple instances.
    
 ----
 
