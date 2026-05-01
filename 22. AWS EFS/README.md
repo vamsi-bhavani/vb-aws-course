@@ -27,7 +27,7 @@ AWS EFS stands for Amazon Elastic File System. It is a scalable, fully managed f
 
 6. **Security**:
    - EFS supports encryption of data at rest and in transit, helping you meet security and compliance requirements.
-----
+   
 ### Benefits of AWS EFS:
 
 - **Ease of Use**: AWS EFS is easy to deploy and manage, with no need to provision storage or manage file systems.
@@ -39,7 +39,7 @@ AWS EFS stands for Amazon Elastic File System. It is a scalable, fully managed f
 - **Cost-effective**: You pay only for the storage used, without any upfront costs or minimum fees. EFS also offers cost savings compared to managing and scaling your own file storage infrastructure.
 
 - **Reliability**: With data stored redundantly across multiple availability zones, EFS ensures high availability and durability for your file storage needs.
-----
+
 ### Use Cases of AWS EFS
 
 1. **Content Management:** Storing and sharing content files, documents, and media assets among multiple EC2 instances.
@@ -51,14 +51,54 @@ AWS EFS stands for Amazon Elastic File System. It is a scalable, fully managed f
 4. **Container Storage:** Storing persistent data for containers managed by Kubernetes or ECS.
 
 5. **Database Backups:** Storing database backups and logs accessible by multiple instances.
+   
 ----
-### Types of AWS EFS Storage Classes
 
-AWS EFS currently offers two storage classes:
+## Types of AWS EFS Storage Classes
 
-1. **Standard Storage:** This is the default storage class that is suitable for workloads with a broad range of access patterns, including frequently accessed data and larger volumes of data.
+AWS EFS provides **three storage classes**:
 
-2. **Infrequent Access (IA) Storage:** This storage class is optimized for workloads that access data less frequently but require cost-effective storage. It provides a lower price point compared to standard storage, with a retrieval fee when accessing data.
+### 1. Standard Storage
+
+* Default storage class
+* Designed for **frequently accessed data**
+* Low latency, higher cost
+
+**Examples:**
+
+* Web applications serving live traffic
+* Application files accessed daily
+
+### 2. Infrequent Access (IA)
+
+* Lower storage cost than Standard
+* **Retrieval charges apply** when data is accessed
+* Suitable for data accessed occasionally
+
+**Examples:**
+
+* Backup files
+* Logs accessed once in a while
+
+
+### 3. Archive Storage
+
+* **Lowest cost storage class**
+* Higher latency and retrieval cost
+* Designed for **rarely accessed data**
+
+**Examples:**
+
+* Compliance or audit data
+* Old historical records
+
+
+## Key Point
+
+AWS EFS supports **lifecycle management**, which automatically moves files:
+
+* Standard → IA → Archive
+
 ----
 ### Lab Session - Creation of AWS EFS
 
