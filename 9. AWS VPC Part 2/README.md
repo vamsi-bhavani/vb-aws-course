@@ -7,11 +7,9 @@
 
 ### NAT Gateway and NAT Instance in AWS VPC
 
-**NAT (Network Address Translation) Gateway** and **NAT Instance** are used to enable instances in a private subnet to connect to the internet or other AWS services, but prevent the internet from initiating connections with those instances.
-
 ### NAT Gateway
 
-**NAT Gateway** is a managed service provided by AWS that enables instances in a private subnet to connect to the internet. It is highly available and scalable, automatically managed by AWS.
+**NAT (Network Address Translation) Gateway** is a managed service provided by AWS that enables instances in a private subnet to connect to the internet. It is highly available and scalable, automatically managed by AWS.
 
 **Key Features of NAT Gateway:**
 - **Managed Service:** AWS manages the NAT Gateway, ensuring high availability and scalability.
