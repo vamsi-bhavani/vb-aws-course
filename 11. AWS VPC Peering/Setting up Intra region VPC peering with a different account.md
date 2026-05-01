@@ -1,5 +1,5 @@
 # Setting up Intra region VPC peering with different account
-![Lab - Setting up Intra region VPC peering with a different account in English - Moole Muralidhara Reddy](https://github.com/techworldwithmurali/AWS-Networking-From-Zero-to-Hero/blob/main/AWS%20VPC%20Peering/images/Setting%20Up%20Intra-Region%20VPC%20Peering%20Between%20Different%20AWS%20Accounts%20-%20Moole%20Muralidhara%20Reddy%20-%20Tech%20World%20with%20Murali.png)
+
 
 #### Step 1: Create the Infra VPC
 ```xml
