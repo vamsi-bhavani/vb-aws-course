@@ -18,7 +18,7 @@
 - **Automatic Scaling:** It automatically scales up to meet bandwidth requirements.
 - **Ease of Use:** Simple to set up and requires minimal maintenance.
 - **High Availability:** Deployed in a specific availability zone but can be set up with multiple NAT Gateways across different zones for redundancy.
-----
+  
 ### NAT Instance
 
 **NAT Instance** is an EC2 instance configured to perform network address translation (NAT) for instances in a private subnet.
@@ -28,7 +28,7 @@
 - **Scalability:** Requires manual intervention to scale.
 - **Management:** Requires management of instance lifecycle, including updates and monitoring.
 - **High Availability:** High availability must be manually configured using scripts or services like Auto Scaling.
-----
+
 ### Differences between NAT Gateway and NAT Instance
 
 | Feature                | NAT Gateway                   | NAT Instance                  |
