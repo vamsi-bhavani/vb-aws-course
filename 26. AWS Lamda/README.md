@@ -12,8 +12,6 @@
 - **AWS Lambda** is a **serverless compute service** that enables you to run code without provisioning or managing servers.
 - It automatically scales your applications by running code in response to events and only charges for the compute time consumed.
 
----
-
 ## 🚀 Why Use AWS Lambda?
 
 | Feature              | Benefit                                                                 |
@@ -25,7 +23,6 @@
 | **Fast Deployment**  | Just upload the code and configure trigger and IAM role                  |
 | **Secure**           | Integrates with IAM for fine-grained access control                      |
 
----
 
 ## ⚙️ Supported Runtimes
 
@@ -69,7 +66,6 @@ AWS Lambda also supports functions packaged as **container images** (up to 10 GB
 | **Concurrent executions**        | 1,000 (default, adjustable with request)                |
 | **Environment variable size**    | 4 KB total                                              |
 
----
 
 ### 🔹 Security & IAM
 
@@ -77,8 +73,6 @@ AWS Lambda also supports functions packaged as **container images** (up to 10 GB
 |-------------------------------|-----------------------------------------------------------|
 | **IAM required**              | Must attach an IAM role with correct permissions          |
 | **Timeout risks**             | Sensitive operations may fail if timeouts are mismanaged  |
-
----
 
 ### 🔹 Networking Constraints
 
@@ -101,7 +95,6 @@ AWS Lambda also supports functions packaged as **container images** (up to 10 GB
 | **Payload size (API Gateway)** | 6 MB                                                            |
 | **No GPU support**           | Cannot be used for GPU-intensive workloads (e.g., ML model training) |
 
----
 
 ## 🛠️ Workarounds for Common Limitations
 
