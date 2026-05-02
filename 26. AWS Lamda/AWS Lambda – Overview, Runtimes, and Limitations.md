@@ -37,9 +37,9 @@ AWS Lambda supports a variety of runtimes to suit different programming environm
 
 | Language     | Runtime Identifier       |
 |--------------|--------------------------|
-| Node.js      | `nodejs18.x`, `nodejs16.x` |
-| Python       | `python3.12`, `python3.11`, `python3.10`, `python3.9` |
-| Java         | `java21`, `java17`, `java11` |
+| Node.js      | `nodejs22.x`, `nodejs24.x` |
+| Python       | `python3.14`,`python3.12`, `python3.11`, `python3.10`, `python3.9` |
+| Java         | `java25`,`java21`, `java17`, `java11` |
 | Go           | `go1.x`                  |
 | Ruby         | `ruby3.2`                |
 | .NET         | `dotnet8`, `dotnet7`, `dotnet6` (via custom container) |
