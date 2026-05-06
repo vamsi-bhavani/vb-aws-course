@@ -20,13 +20,10 @@
 3. **Integration with AWS Services**:
    - ACM integrates seamlessly with other AWS services, making it straightforward to deploy SSL/TLS certificates to resources like ELB, CloudFront distributions, and API Gateway APIs.
 
-4. **Global Infrastructure and Scaling**:
-   - ACM is designed to scale automatically and operates across multiple AWS regions, allowing you to use the same SSL/TLS certificate across your global infrastructure.
-
-5. **Private Certificate Authority (CA)**:
+4. **Private Certificate Authority (CA)**:
    - ACM Private CA allows you to create and manage a private certificate authority, enabling you to issue private certificates for internal resources securely.
 
-6. **Security and Compliance**:
+5. **Security and Compliance**:
    - ACM helps you maintain a secure environment by providing managed certificates that adhere to industry standards and best practices for encryption and security.
 
 ### Benefits of AWS ACM:
@@ -37,7 +34,7 @@
 
 - **Integrated with AWS**: ACM integrates seamlessly with other AWS services, ensuring that SSL/TLS certificates are easily deployed and managed across your AWS infrastructure.
 
-- **Highly Available and Secure**: ACM leverages AWS's global infrastructure and security best practices to ensure high availability and secure management of SSL/TLS certificates.
+- **Highly Available and Secure**: AWS Certificate Manager is a regional service designed for high availability across multiple Availability Zones within an AWS region, and it follows AWS security best practices to ensure secure management of SSL/TLS certificates.
 ----
 ### Lab Session - Creating AWS ACM
 
