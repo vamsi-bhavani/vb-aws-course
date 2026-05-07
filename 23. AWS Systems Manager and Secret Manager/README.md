@@ -20,22 +20,19 @@ AWS Systems Manager (SSM) is a management service provided by Amazon Web Service
 3. **Parameter Store**:
    - AWS Systems Manager Parameter Store provides secure storage for configuration data, such as database connection strings, application settings, and API keys. Parameters can be encrypted using AWS KMS (Key Management Service) for enhanced security.
 
-4. **Secrets Manager**:
-   - AWS Secrets Manager is used to securely store, manage, and retrieve sensitive information such as database credentials, API keys, tokens, and other secrets. It supports automatic secret rotation and integrates with AWS KMS for encryption.
-
-5. **Session Manager**:
+4. **Session Manager**:
    - Session Manager allows you to securely connect to your instances without the need for SSH/RDP access. It provides interactive shell access to instances through the AWS Management Console, CLI, or SDK.
 
-6. **Patch Manager**:
+5. **Patch Manager**:
    - Patch Manager automates the process of patching Amazon EC2 instances and on-premises servers with security patches provided by AWS or custom patches defined by you.
 
-7. **State Manager**:
+6. **State Manager**:
    - State Manager allows you to define and enforce system configurations for your instances. It ensures instances are in a consistent state, applying configuration changes and maintaining compliance.
 
-8. **OpsCenter**:
+7. **OpsCenter**:
    - OpsCenter provides a central location to view, investigate, and resolve operational issues related to AWS resources, including EC2 instances, Systems Manager documents, and OpsItems (operational tasks and issues).
 
-9. **Maintenance Windows**:
+8. **Maintenance Windows**:
    - Maintenance Windows allow you to define a schedule for performing administrative tasks, such as patching and updates, across your instances and resources.
 ----
 ### Benefits of AWS Systems Manager:
