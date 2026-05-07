@@ -18,21 +18,24 @@ AWS Systems Manager (SSM) is a management service provided by Amazon Web Service
    - Run Command enables you to remotely execute commands on your Amazon EC2 instances and on-premises servers. This can include tasks such as running PowerShell scripts or shell commands.
 
 3. **Parameter Store**:
-   - Parameter Store provides secure storage for configuration and secrets management, such as database credentials, API keys, and configuration strings. Parameters can be encrypted with AWS KMS (Key Management Service) for added security.
+   - AWS Systems Manager Parameter Store provides secure storage for configuration data, such as database connection strings, application settings, and API keys. Parameters can be encrypted using AWS KMS (Key Management Service) for enhanced security.
 
-4. **Session Manager**:
+4. **Secrets Manager**:
+   - AWS Secrets Manager is used to securely store, manage, and retrieve sensitive information such as database credentials, API keys, tokens, and other secrets. It supports automatic secret rotation and integrates with AWS KMS for encryption.
+
+5. **Session Manager**:
    - Session Manager allows you to securely connect to your instances without the need for SSH/RDP access. It provides interactive shell access to instances through the AWS Management Console, CLI, or SDK.
 
-5. **Patch Manager**:
+6. **Patch Manager**:
    - Patch Manager automates the process of patching Amazon EC2 instances and on-premises servers with security patches provided by AWS or custom patches defined by you.
 
-6. **State Manager**:
+7. **State Manager**:
    - State Manager allows you to define and enforce system configurations for your instances. It ensures instances are in a consistent state, applying configuration changes and maintaining compliance.
 
-7. **OpsCenter**:
+8. **OpsCenter**:
    - OpsCenter provides a central location to view, investigate, and resolve operational issues related to AWS resources, including EC2 instances, Systems Manager documents, and OpsItems (operational tasks and issues).
 
-8. **Maintenance Windows**:
+9. **Maintenance Windows**:
    - Maintenance Windows allow you to define a schedule for performing administrative tasks, such as patching and updates, across your instances and resources.
 ----
 ### Benefits of AWS Systems Manager:
@@ -50,6 +53,7 @@ AWS Systems Manager (SSM) is a management service provided by Amazon Web Service
 AWS Systems Manager supports a wide range of operating systems, including:
 - Amazon Linux
 - Amazon Linux 2
+- Amazon Linux 2023
 - Ubuntu
 - CentOS
 - Red Hat Enterprise Linux (RHEL)
@@ -70,7 +74,7 @@ SSM Agent enables the following capabilities:
 - **Run Command:** Allows you to remotely execute scripts or commands on your instances without needing to SSH into them.
 - **State Manager:** Ensures your instances are configured per your desired state, enforcing configurations and applying updates automatically.
 - **Inventory and Patch Management:** Collects metadata about your instances, installed applications, and patches, facilitating inventory management and patch deployments.
-----
+
 ### Install SSM Agent on EC2 Instance:
 To install SSM Agent on an EC2 instance, you typically follow these steps:
 
@@ -136,8 +140,9 @@ Once installed and configured, your EC2 instance is ready to use with AWS System
 ----
 ### What is Parameter Store?
 
-- **Parameter Store** is a secure AWS service that provides hierarchical storage for configuration data and secrets management.
-- It allows you to store and manage configuration data such as database strings, passwords, API keys, and other sensitive information.
+- Parameter Store is an AWS Systems Manager service that provides secure, hierarchical storage for configuration data and sensitive values.
+- It allows you to store and manage data such as database connection strings, application configurations, API keys, and passwords.
+- Parameters can also be encrypted using AWS KMS for enhanced security.
 
 ### Creating the Parameter Store
 
@@ -152,6 +157,27 @@ To create a parameter in Parameter Store:
    - Configure any additional options such as encryption and tags.
    - Click "Create Parameter" to create the parameter.
 ----
+### What is Secrets Manager?
+
+**Secrets Manager** is an AWS service that helps you securely store, manage, and access sensitive information such as API keys, database passwords, and other credentials. It enables you to rotate, manage access, and audit usage of secrets throughout their lifecycle.
+
+### Working with Secrets Manager
+
+Secrets Manager allows you to:
+- **Store Secrets:** Securely store sensitive information in Secrets Manager using key encryption.
+- **Rotate Secrets:** Automatically rotate secrets periodically or manually to enhance security.
+- **Access Controls:** Define fine-grained access policies to control who can access and manage secrets.
+- **Integration:** Integrate with AWS services and third-party applications securely using secrets.
+
+**Creating and Managing Secrets:**
+   - Navigate to AWS Secrets Manager.
+   - Click on "Store a new secret."
+   - Enter the secret details (e.g., key-value pairs, secrets).
+   - Configure rotation settings if needed.
+   - Click "Next" and review the settings.
+   - Click "Store" to create the secret.
+----
+
 ### What is Run Command?
 
 - **Run Command** is a Systems Manager feature that allows you to remotely and securely execute commands on your managed instances.
@@ -191,22 +217,4 @@ Patch Manager allows you to:
    - Define the schedule for patching operations.
    - Apply the patch baseline to your instances.
 ----
-### What is Secrets Manager?
 
-**Secrets Manager** is an AWS service that helps you securely store, manage, and access sensitive information such as API keys, database passwords, and other credentials. It enables you to rotate, manage access, and audit usage of secrets throughout their lifecycle.
-
-### Working with Secrets Manager
-
-Secrets Manager allows you to:
-- **Store Secrets:** Securely store sensitive information in Secrets Manager using key encryption.
-- **Rotate Secrets:** Automatically rotate secrets periodically or manually to enhance security.
-- **Access Controls:** Define fine-grained access policies to control who can access and manage secrets.
-- **Integration:** Integrate with AWS services and third-party applications securely using secrets.
-
-**Creating and Managing Secrets:**
-   - Navigate to AWS Secrets Manager.
-   - Click on "Store a new secret."
-   - Enter the secret details (e.g., key-value pairs, secrets).
-   - Configure rotation settings if needed.
-   - Click "Next" and review the settings.
-   - Click "Store" to create the secret.
