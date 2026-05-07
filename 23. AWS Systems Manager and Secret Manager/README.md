@@ -126,7 +126,7 @@ To install SSM Agent on an EC2 instance, you typically follow these steps:
 
      ```bash
      sudo systemctl status amazon-ssm-agent  # Linux
-     Get-Service AmazonSSMAgent -ComputerName "."  # Windows
+     Get-Service AmazonSSMAgent  # Windows
      ```
 
 5. **Verify Connectivity**:
