@@ -6,7 +6,7 @@
 | **Website**              | https://www.vamsibhavani.in              |
 
 
-### What is SSM
+### What is AWS Systems Manager (SSM):
 AWS Systems Manager (SSM) is a management service provided by Amazon Web Services (AWS) that helps you automate tasks across your AWS resources and on-premises environments. It provides a unified user interface that allows you to view operational data from multiple AWS services and automate operational tasks across AWS resources.
 
 ### Key Features of AWS Systems Manager:
