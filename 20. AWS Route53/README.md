@@ -43,6 +43,82 @@
 
 - **Hosted Zone:** A container that holds information about how you want Amazon Route 53 to respond to DNS queries for a domain and its subdomains. It consists of a collection of resource record sets (RRsets) that Route 53 returns in response to DNS queries.
 
+A **Hosted Zone** is basically a **DNS database for your domain**.
+
+Example domain:
+
+`example.com`
+
+Inside that hosted zone, you store DNS entries like:
+
+| Type  | Name                                      | Value           |
+| ----- | ----------------------------------------- | --------------- |
+| A     | example.com                               | 1.2.3.4         |
+| CNAME | [www.example.com](http://www.example.com) | example.com     |
+| MX    | example.com                               | mail.google.com |
+
+These entries are called **DNS records**.
+
+In Route 53, AWS groups records as **Resource Record Sets (RRsets)**.
+
+So:
+
+* **Resource** = domain/subdomain
+* **Record** = DNS entry
+* **Set** = group of records of same name + type
+
+Example:
+
+Suppose you have:
+
+```text
+example.com -> 1.1.1.1
+example.com -> 2.2.2.2
+```
+
+Both are:
+
+* same name (`example.com`)
+* same type (`A`)
+
+Together they form **one RRset**.
+
+That’s why AWS says:
+
+> Hosted Zone contains a collection of RRsets.
+
+Because the hosted zone is just storing all DNS mappings.
+
+Simple mental model:
+
+```text
+Hosted Zone
+   ├── A record set
+   ├── CNAME record set
+   ├── MX record set
+   └── TXT record set
+```
+
+Real example in Route 53:
+
+```text
+Hosted Zone: example.com
+
+RRset 1:
+Type: A
+Name: example.com
+Values:
+ - 1.1.1.1
+ - 2.2.2.2
+
+RRset 2:
+Type: CNAME
+Name: www.example.com
+Value:
+ - example.com
+```
+
+
 ### Types of Hosted Zones
 
 1. **Public Hosted Zone:** Manages domain names that are publicly accessible on the internet.
