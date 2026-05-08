@@ -9,7 +9,7 @@
 # What is AWS Route 53?
 
 - Amazon Route 53 is a highly available and scalable DNS (Domain Name System) web service provided by AWS.
-- It translates human-readable domain names such as `www.example.com` into IP addresses such as `192.0.2.1`, allowing users to access applications and services over the internet.
+- It translates human-readable domain names such as `www.devopsbymurali.com` into IP addresses such as `192.0.2.1`, allowing users to access applications and services over the internet.
 
 Route 53 can also:
 
