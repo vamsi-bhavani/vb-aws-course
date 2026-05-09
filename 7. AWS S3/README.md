@@ -158,7 +158,7 @@
 ----
 ### Presigned URLs in AWS S3
 
-**Presigned URLs:** URLs that grant temporary access to download or upload a specific S3 object with a specified expiration time.
+**Presigned URLs:** URLs that grant temporary access to download a specific S3 object with a specified expiration time.
 
 ### Lab Session - Working with Presigned URLs in AWS S3
  **Generate Presigned URL (Download):**
