@@ -11,11 +11,10 @@
 3. **File Upload**: Allows uploading files ranging from 0 bytes to 5TB each.
 4. **Scalability**: Offers unlimited storage capacity.
 5. **Bucket Storage**: Files are stored in containers called buckets.
-6. **Key Structure**: Keys (object identifiers) can mimic hierarchical structures.
-7. **Data Accessibility**: Enables storing and retrieving any amount of data from anywhere on the internet.
-8. * **Global Unique Names**: Amazon S3 operates with a universal namespace, so bucket names must be globally unique across all AWS accounts and regions.
-9. * **Account-Level Creation**: An AWS account can create and manage multiple S3 buckets under the same account.
-10. **DNS Name**: Each bucket has a DNS name for access (e.g., `https://s3-eu-east-2.amazonaws.com/bucket_name`).
+6. **Data Accessibility**: Enables storing and retrieving any amount of data from anywhere on the internet.
+7. **Global Unique Names**: Amazon S3 operates with a universal namespace, so bucket names must be globally unique across all AWS accounts and regions.
+8. **Account-Level Creation**: An AWS account can create and manage multiple S3 buckets under the same account.
+9. **DNS Name**: Each bucket has a DNS name for access (e.g., `https://s3-eu-east-2.amazonaws.com/bucket_name`).
 
 ### Bucket:
 1. **Object Container**: Buckets are containers for storing objects.
