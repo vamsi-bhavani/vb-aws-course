@@ -94,6 +94,16 @@ A data subnet (another type of private subnet) is used specifically for data sto
 
 - Each subnet has a route table that defines how traffic is routed within the VPC and to external networks.
 - Route tables specify which subnets traffic should be routed to based on the destination IP address.
+----
+### Internet Gateway (IGW) in AWS VPC
+
+**Internet Gateway (IGW):** Allows communication between instances in your VPC and the internet. It serves as a gateway that translates network traffic between the internet and your VPC.
+### Key Characteristics
+
+- **Horizontally Scalable and Highly Available**: An IGW is designed to handle a large amount of traffic and is highly available across multiple Availability Zones in the region.
+- **No Cost**: There is no additional cost to use an IGW, but you will be charged for data transfer and any other AWS services used.
+- **Direct Connectivity**: It allows instances in a public subnet to connect directly to the internet.
+  
 ---
 ### Route Table in AWS VPC
 
@@ -144,15 +154,6 @@ Consider a VPC with the CIDR block `10.0.0.0/16`, a public subnet `10.0.1.0/24`,
 
 By configuring route tables appropriately, you can control the flow of traffic within your VPC and to external networks, ensuring that your resources are accessible as needed while maintaining security and efficiency.
 
-----
-### Internet Gateway (IGW) in AWS VPC
-
-**Internet Gateway (IGW):** Allows communication between instances in your VPC and the internet. It serves as a gateway that translates network traffic between the internet and your VPC.
-### Key Characteristics
-
-- **Horizontally Scalable and Highly Available**: An IGW is designed to handle a large amount of traffic and is highly available across multiple Availability Zones in the region.
-- **No Cost**: There is no additional cost to use an IGW, but you will be charged for data transfer and any other AWS services used.
-- **Direct Connectivity**: It allows instances in a public subnet to connect directly to the internet.
 ----
 ### Lab Session - Overview of the Default VPC in AWS
 
