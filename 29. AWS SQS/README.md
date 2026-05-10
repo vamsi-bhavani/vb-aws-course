@@ -269,9 +269,7 @@ EmployeeQueue.fifo
 
 ### Lab Session : Creation of Standard SQS Queue
 
-###Step 1 — Create Standard SQS Queue
-
-### AWS CLI Command
+### Step 1 — Create Standard SQS Queue
 
 ```
 EmployeeQueue
