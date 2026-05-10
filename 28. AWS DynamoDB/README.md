@@ -165,16 +165,59 @@ This is one of the major advantages of NoSQL databases like DynamoDB.
    * Can reduce cost for stable traffic patterns.
 
 ---
+### Limitations of DynamoDB
 
-### DynamoDB vs RDS
+1. **No SQL Joins:**
 
-| Feature       | DynamoDB                 | RDS                     |
-| ------------- | ------------------------ | ----------------------- |
-| Database Type | NoSQL                    | Relational SQL          |
-| Schema        | Flexible                 | Fixed                   |
-| Scaling       | Horizontal               | Mostly Vertical         |
-| Joins         | Not Supported            | Supported               |
-| Performance   | Very High                | Moderate                |
-| Best For      | Large-scale applications | Relational applications |
+   * Joins are not supported like relational databases.
+   * Data must be designed differently compared to SQL databases.
+
+2. **Complex Query Limitations:**
+
+   * Complex relational queries are difficult.
+   * Not ideal for highly relational applications.
+
+3. **Partition Key Design is Critical:**
+
+   * Poor partition key design can create hot partitions.
+   * Can impact performance and increase costs.
+
+4. **Limited Transaction Complexity:**
+
+   * Supports transactions, but not as flexible as relational databases.
+   * Complex multi-table operations are difficult.
+
+5. **Item Size Limitation:**
+
+   * Maximum item size is 400 KB.
+   * Large documents may require splitting data.
+
+6. **Cost Can Increase Quickly:**
+
+   * Poor design or heavy traffic can increase read/write costs significantly.
+   * Scans are expensive for large tables.
+
+---
+
+### Difference between DynamoDB vs RDS
+
+| Feature                   | DynamoDB                      | RDS                                       |
+| ------------------------- | ----------------------------- | ----------------------------------------- |
+| Database Type             | NoSQL                         | Relational SQL                            |
+| Schema                    | Flexible                      | Fixed                                     |
+| Scaling                   | Horizontal                    | Mostly Vertical                           |
+| Joins                     | Not Supported                 | Supported                                 |
+| Performance               | Very High                     | Moderate                                  |
+| Infrastructure Management | Fully Managed Serverless      | Managed but requires DB administration    |
+| Latency                   | Single-digit milliseconds     | Higher compared to DynamoDB               |
+| Transactions              | Limited support               | Strong transaction support                |
+| Auto Scaling              | Automatic                     | Limited/Manual depending on configuration |
+| Storage Structure         | Key-Value / Document          | Tables with rows and columns              |
+| Best For                  | Large-scale applications      | Relational applications                   |
+| Common Use Cases          | Gaming, IoT, Real-time apps   | Banking, ERP, HRMS applications           |
+| Query Language            | No SQL queries                | Supports SQL                              |
+| Cost Model                | Pay per request / Provisioned | Instance-based pricing                    |
+| Availability              | Multi-AZ by default           | Multi-AZ optional                         |
+| Data Relationships        | Weak relational support       | Strong relational support                 |
 
 ---
