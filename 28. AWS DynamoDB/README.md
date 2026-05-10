@@ -23,13 +23,13 @@
 
 ### What is DynamoDB?
 
-* Amazon DynamoDB is a fully managed NoSQL database service provided by [Amazon Web Services](https://aws.amazon.com?utm_source=chatgpt.com).
+* Amazon DynamoDB is a fully managed NoSQL database service provided by [Amazon Web Services](https://aws.amazon.com).
 * It is designed to provide fast and predictable performance with seamless scalability.
 * DynamoDB is serverless, meaning AWS automatically manages infrastructure, scaling, replication, and maintenance.
 * It supports single-digit millisecond latency even at very large scale.
 
 Official Documentation:
-[Amazon DynamoDB Documentation](https://docs.aws.amazon.com/dynamodb/?utm_source=chatgpt.com)
+[Amazon DynamoDB Documentation](https://docs.aws.amazon.com/dynamodb/)
 
 ---
 
@@ -88,14 +88,26 @@ Official Documentation:
 
 #### Employee Table
 
-| EmpId | Name   | Department |
-| ----- | ------ | ---------- |
-| 101   | Murali | DevOps     |
-| 102   | Ravi   | AWS        |
+| EmpId | Name   | Department | Email                                       | Address   |
+| ----- | ------ | ---------- | ------------------------------------------- | --------- |
+| 101   | Murali | DevOps     | murali@gmail.com                            |
+| 102   | Ravi   | AWS        |                                             | Hyderabad |
 
-* Table Name → Employees
-* Item → Single employee record
-* Attributes → EmpId, Name, Department
+* **Table Name** → Employees
+* **Item** → Single employee record
+* **Attributes** → EmpId, Name, Department, Email, Address
+
+### Important Point
+
+* In Amazon DynamoDB, every item can have different attributes.
+* Unlike SQL databases, all records do not need the same columns/values.
+
+#### Example:
+
+* Murali has Email but no Address.
+* Ravi has Address but no Email.
+
+This is one of the major advantages of NoSQL databases like DynamoDB.
 
 ---
 
