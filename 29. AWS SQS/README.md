@@ -5,7 +5,7 @@
 | **Name**    | Moole Muralidhara Reddy                                                     |
 | **Website** | [Vamsi Bhavani Website](https://www.vamsibhavani.in) |
 
-# What is AWS SQS?
+### What is AWS SQS?
 
 Amazon Simple Queue Service (Amazon SQS) is a fully managed message queuing service provided by [Amazon Web Services](https://aws.amazon.com?utm_source=chatgpt.com).
 
@@ -24,7 +24,7 @@ Official Documentation:
 
 ---
 
-# Why Do We Need SQS?
+### Why Do We Need SQS?
 
 Without SQS:
 
@@ -51,29 +51,29 @@ Advantages:
 
 ---
 
-# Features of AWS SQS
+### Features of AWS SQS
 
-## 1. Fully Managed Service
+### 1. Fully Managed Service
 
 * AWS manages infrastructure, scaling, and maintenance automatically.
 * No server management required.
 
-## 2. Asynchronous Communication
+### 2. Asynchronous Communication
 
 * Applications communicate through messages instead of direct connections.
 * Improves system reliability.
 
-## 3. High Scalability
+### 3. High Scalability
 
 * Automatically scales to process millions of messages.
 
 
-## 4. High Availability
+### 4. High Availability
 
 * Messages are replicated across multiple AWS servers.
 * Ensures durability and fault tolerance.
 
-## 5. Secure Messaging
+### 5. Secure Messaging
 
 Supports:
 
@@ -83,46 +83,46 @@ Supports:
 * VPC endpoints
 
 
-## 6. Dead Letter Queue (DLQ)
+### 6. Dead Letter Queue (DLQ)
 
 * Stores failed or unprocessed messages.
 * Helps in troubleshooting failures.
 
 
-## 7. Visibility Timeout
+### 7. Visibility Timeout
 
 * Prevents multiple consumers from processing the same message simultaneously.
 
 
-## 8. Message Retention
+### 8. Message Retention
 
 * Messages can be retained from:
 
   * 1 minute to 14 days
 
 
-## 9. Long Polling
+### 9. Long Polling
 
 * Reduces empty responses.
 * Improves efficiency and reduces cost.
 
 ---
-# Types of SQS Queues
+### Types of SQS Queues
 
 | Queue Type     | Description                                              |
 | -------------- | -------------------------------------------------------- |
 | Standard Queue | High throughput with at-least-once delivery              |
 | FIFO Queue     | First-In-First-Out ordering with exactly-once processing |
 
-# Standard Queue
+### Standard Queue
 
-## Definition
+### Definition
 
 * Standard Queue is the default queue type in Amazon Simple Queue Service.
 * It is designed for maximum throughput, scalability, and availability.
 * Message ordering is not guaranteed strictly.
 
-## Features
+### Features
 
 * Nearly unlimited throughput
 * Best-effort ordering
@@ -130,7 +130,7 @@ Supports:
 * Duplicate messages possible
 * Very high scalability
 
-## Advantages
+### Advantages
 
 1. Handles massive traffic
 2. Highly scalable
@@ -138,13 +138,13 @@ Supports:
 4. Cost effective
 5. Suitable for distributed systems
 
-## Limitations
+### Limitations
 
 1. Duplicate messages may occur
 2. Message order is not guaranteed
 3. Applications must handle duplicate processing
 
-## Use Cases
+### Use Cases
 
 * Background processing
 * Event-driven systems
@@ -152,7 +152,7 @@ Supports:
 * Log processing
 * Email processing systems
 
-## Real-Time Example — Zomato
+### Real-Time Example — Zomato
 
 ```text id="j1bg4s"
 User Places Order
@@ -167,9 +167,9 @@ Restaurant Service
 
 ---
 
-# FIFO Queue
+### FIFO Queue
 
-## Definition
+### Definition
 
 * FIFO Queue guarantees:
 
@@ -177,7 +177,7 @@ Restaurant Service
   * Exactly-once message processing
 * Messages are processed in the same order they are sent.
 
-## Features
+### Features
 
 * Strict message ordering
 * Exactly-once processing
@@ -185,20 +185,20 @@ Restaurant Service
 * Message deduplication support
 * Lower throughput compared to Standard Queue
 
-## Advantages
+### Advantages
 
 1. Prevents duplicate processing
 2. Guarantees message sequence
 3. Suitable for critical systems
 4. Better data consistency
 
-## Limitations
+### Limitations
 
 1. Lower throughput than Standard Queue
 2. Slightly higher cost
 3. Not ideal for extremely high-traffic workloads
 
-## Use Cases
+### Use Cases
 
 * Banking applications
 * Financial systems
@@ -206,7 +206,7 @@ Restaurant Service
 * Order processing systems
 * Inventory management
 
-## Real-Time Example — Banking System
+### Real-Time Example — Banking System
 
 ```text id="hn5wpm"
 Transaction 1 → FIFO Queue → Processed First
@@ -218,7 +218,7 @@ Example:
 * ₹500 debit should happen before ₹1000 debit if sent earlier.
 * Order of transactions is extremely important.
 
-# Standard Queue vs FIFO Queue
+### Standard Queue vs FIFO Queue
 
 | Feature            | Standard Queue          | FIFO Queue               |
 | ------------------ | ----------------------- | ------------------------ |
@@ -230,9 +230,9 @@ Example:
 | Cost               | Lower                   | Higher                   |
 | Best For           | High-scale applications | Critical ordered systems |
 
-# Important Naming Rule
+### Important Naming Rule
 
-## Standard Queue
+### Standard Queue
 
 Example:
 
@@ -240,7 +240,7 @@ Example:
 EmployeeQueue
 ```
 
-## FIFO Queue
+### FIFO Queue
 
 Queue name must end with:
 
@@ -254,7 +254,7 @@ Example:
 EmployeeQueue.fifo
 ```
 
-# Which Queue Should You Choose?
+### Which Queue Should You Choose?
 
 | Scenario                   | Recommended Queue |
 | -------------------------- | ----------------- |
@@ -266,3 +266,103 @@ EmployeeQueue.fifo
 | Ordered processing systems | FIFO Queue        |
 
 ---
+
+### Creation of Standard SQS Queue
+
+###Step 1 — Create Standard SQS Queue
+
+### AWS CLI Command
+
+```
+EmployeeQueue
+
+```
+
+### Step 2 — Send Message to SQS Queue
+
+###Command
+
+```bash id="c7m1ps"
+aws sqs send-message \
+--queue-url https://sqs.us-east-1.amazonaws.com/617618117734/EmployeeQueue \
+--message-body "Hello from AWS SQS" \
+--region us-east-1
+```
+
+### Example JSON Message
+
+```bash id="h2f7vk"
+aws sqs send-message \
+--queue-url https://sqs.us-east-1.amazonaws.com/617618117734/EmployeeQueue \
+--message-body '{"EmpId":"101","Name":"Murali","Department":"DevOps"}' \
+--region us-east-1
+```
+
+---
+
+### Step 3 — Read Messages from SQS Queue
+
+### Command
+
+```bash id="q9x2eb"
+aws sqs receive-message \
+--queue-url https://sqs.us-east-1.amazonaws.com/617618117734/EmployeeQueue \
+--region us-east-1
+```
+
+### Expected Output
+
+```json id="2v5nlg"
+{
+    "Messages": [
+        {
+            "MessageId": "xxxx",
+            "ReceiptHandle": "AQEBxxxx",
+            "Body": "Hello from AWS SQS"
+        }
+    ]
+}
+```
+### Important Note
+
+* ReceiptHandle is required to delete the message.
+* Every receive operation generates a new ReceiptHandle.
+
+### Step 4 — Delete Message from SQS Queue
+
+### Command
+
+```bash id="8r1pzc"
+aws sqs delete-message \
+--queue-url https://sqs.us-east-1.amazonaws.com/617618117734/EmployeeQueue \
+--receipt-handle AQEBxxxx \
+--region us-east-1
+```
+
+### Full Workflow
+
+```text id="4u2vbe"
+Create Queue
+     ↓
+Send Message
+     ↓
+Receive Message
+     ↓
+Process Message
+     ↓
+Delete Message
+```
+
+### Real-Time Example — Zomato
+
+```text id="1j9vkp"
+Customer Places Order
+        ↓
+Order Message Sent to SQS
+        ↓
+Restaurant Service Reads Message
+        ↓
+Processes Order
+        ↓
+Deletes Message
+```
