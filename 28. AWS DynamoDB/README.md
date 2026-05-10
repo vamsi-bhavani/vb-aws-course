@@ -90,7 +90,7 @@ Official Documentation:
 
 | EmpId | Name   | Department | Email                                       | Address   |
 | ----- | ------ | ---------- | ------------------------------------------- | --------- |
-| 101   | Murali | DevOps     | murali@gmail.com                            |
+| 101   | Murali | DevOps     | murali@gmail.com                            |           |
 | 102   | Ravi   | AWS        |                                             | Hyderabad |
 
 * **Table Name** → Employees
@@ -221,3 +221,88 @@ This is one of the major advantages of NoSQL databases like DynamoDB.
 | Data Relationships        | Weak relational support       | Strong relational support                 |
 
 ---
+
+### Creating DynamoDB Table Using AWS Console
+
+1. **Open DynamoDB Service:**
+
+   * Sign in to the AWS Management Console.
+   * Search for and open Amazon DynamoDB service.
+
+2. **Create Table:**
+
+   * Click on **"Create Table"** button.
+
+3. **Enter Table Details:**
+
+   * Provide the required table details:
+
+     * Table Name
+     * Partition Key
+     * Sort Key (optional)
+
+Example:
+
+| Setting       | Value                 |
+| ------------- | --------------------- |
+| Table Name    | Employees             |
+| Partition Key | EmpId                 |
+| Sort Key      | Department (Optional) |
+
+4. **Choose Table Settings:**
+
+   * Select:
+
+     * **On-Demand Capacity Mode** for automatic scaling.
+   * Configure additional settings if required:
+
+     * Secondary Indexes
+     * Encryption
+     * Tags
+     * Streams
+
+5. **Review Configuration:**
+
+   * Verify table configuration details.
+   * Ensure partition key design is correct for proper performance.
+
+6. **Create Table:**
+
+   * Click on **"Create Table."**
+   * AWS will provision the DynamoDB table automatically.
+
+
+### After Table Creation
+
+You can perform operations like:
+
+1. **Insert Items**
+
+   * Add employee records into the table.
+
+2. **Read Data**
+
+   * Retrieve items using partition key.
+
+3. **Update Items**
+
+   * Modify existing employee details.
+
+4. **Delete Items**
+
+   * Remove unwanted records.
+
+
+### Example Employee Table
+
+| EmpId | Name   | Department | Email                                       | Address   |
+| ----- | ------ | ---------- | ------------------------------------------- | --------- |
+| 101   | Murali | DevOps     | murali@gmail.com                            |           |
+| 102   | Ravi   | AWS        |                                             | Hyderabad |
+
+
+### Important Note
+
+* In Amazon DynamoDB, different items can contain different attributes.
+* DynamoDB does not require fixed schemas like relational databases.
+* This flexibility makes DynamoDB suitable for evolving applications and large-scale workloads.
