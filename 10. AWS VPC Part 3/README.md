@@ -214,9 +214,11 @@ Name: MyPrefixList
 Description: List of allowed IP ranges
 Max entries: 10
 CIDR blocks:
-  - 192.168.1.0/24
-  - 10.0.0.0/16
-  - 172.16.0.0/12
+  - 208.67.222.222/32
+  - 208.67.220.220/32
+  - 94.140.14.14/32
+  - 76.76.19.19/32
+  - 185.228.168.9/32
 ```
 
 #### Step 2: Update Route Tables to Use the Prefix List
