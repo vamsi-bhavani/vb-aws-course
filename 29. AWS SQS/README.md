@@ -267,7 +267,7 @@ EmployeeQueue.fifo
 
 ---
 
-### Creation of Standard SQS Queue
+### Lab Session : Creation of Standard SQS Queue
 
 ###Step 1 — Create Standard SQS Queue
 
