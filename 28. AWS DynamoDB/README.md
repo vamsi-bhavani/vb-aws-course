@@ -31,8 +31,6 @@
 Official Documentation:
 [Amazon DynamoDB Documentation](https://docs.aws.amazon.com/dynamodb/)
 
----
-
 ### Features of DynamoDB
 
 1. **Fully Managed Service:**
@@ -70,7 +68,6 @@ Official Documentation:
    * Supports IAM, encryption, backups, and VPC endpoints.
    * Ensures secure data access.
 
----
 
 ### Core Components of DynamoDB
 
@@ -81,8 +78,6 @@ Official Documentation:
 | **Attribute**     | Field or column value               |
 | **Partition Key** | Primary key used to distribute data |
 | **Sort Key**      | Optional key for sorting data       |
-
----
 
 ### DynamoDB Table Example
 
@@ -108,6 +103,20 @@ Official Documentation:
 * Ravi has Address but no Email.
 
 This is one of the major advantages of NoSQL databases like DynamoDB.
+
+### DynamoDB Capacity Modes
+
+1. **On-Demand Mode:**
+
+   * Pay per request.
+   * Automatically handles traffic scaling.
+   * Best for unpredictable workloads.
+
+2. **Provisioned Mode:**
+
+   * Manually define read/write capacity units.
+   * Best for predictable workloads.
+   * Can reduce cost for stable traffic patterns.
 
 ---
 
@@ -147,22 +156,6 @@ This is one of the major advantages of NoSQL databases like DynamoDB.
    * Event tracking
    * Clickstream analysis
    * Real-time dashboards
-
----
-
-### DynamoDB Capacity Modes
-
-1. **On-Demand Mode:**
-
-   * Pay per request.
-   * Automatically handles traffic scaling.
-   * Best for unpredictable workloads.
-
-2. **Provisioned Mode:**
-
-   * Manually define read/write capacity units.
-   * Best for predictable workloads.
-   * Can reduce cost for stable traffic patterns.
 
 ---
 ### Limitations of DynamoDB
