@@ -65,7 +65,7 @@ Official Documentation:
 
 7. **Security Integration:**
 
-   * Supports IAM, encryption, backups, and VPC endpoints.
+   * Supports IAM, encryption, backups.
    * Ensures secure data access.
 
 
