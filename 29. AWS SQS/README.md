@@ -278,7 +278,7 @@ EmployeeQueue
 
 ### Step 2 — Send Message to SQS Queue
 
-###Command
+### Command
 
 ```bash id="c7m1ps"
 aws sqs send-message \
