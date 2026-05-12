@@ -24,14 +24,14 @@ Official Documentation:
 [Amazon API Gateway Documentation](https://docs.aws.amazon.com/apigateway/)
 
 
-# Features of AWS API Gateway
+### Features of AWS API Gateway
 
-## 1. Fully Managed Service
+#### 1. Fully Managed Service
 
 * AWS manages infrastructure, scaling, maintenance, and availability automatically.
 * No server management required.
 
-## 2. Supports Multiple API Types
+#### 2. Supports Multiple API Types
 
 API Gateway supports:
 
@@ -39,13 +39,13 @@ API Gateway supports:
 * HTTP API
 * WebSocket API
 
-## 3. AWS Lambda Integration
+#### 3. AWS Lambda Integration
 
 * Direct integration with AWS Lambda functions.
 * Enables serverless application architecture.
 
 
-## 4. Security Features
+#### 4. Security Features
 
 Supports:
 
@@ -56,7 +56,7 @@ Supports:
 * AWS WAF Integration
 
 
-## 5. Traffic Management
+#### 5. Traffic Management
 
 * Throttling
 * Rate limiting
@@ -64,7 +64,7 @@ Supports:
 * Caching
 
 
-## 6. Monitoring and Logging
+#### 6. Monitoring and Logging
 
 Integrated with:
 
@@ -73,31 +73,31 @@ Integrated with:
 * AWS X-Ray
 
 
-## 7. High Scalability
+#### 7. High Scalability
 
 * Automatically scales based on API traffic.
 * Handles millions of API requests.
 
 
-## 8. CORS Support
+#### 8. CORS Support
 
 * Supports Cross-Origin Resource Sharing configuration.
 * Useful for frontend applications.
 
 ---
 
-# Types of APIs in AWS API Gateway
+### Types of APIs in AWS API Gateway
 
 Amazon API Gateway supports multiple API types designed for different use cases and architectures.
 
-## 1. HTTP API
+#### 1. HTTP API
 
-### Definition
+##### Definition
 
 * HTTP APIs are lightweight, low-latency, and cost-effective APIs.
 * Mainly designed for serverless workloads and modern applications.
 
-### Features
+##### Features
 
 * Low cost
 * High performance
@@ -105,12 +105,12 @@ Amazon API Gateway supports multiple API types designed for different use cases 
 * Supports OIDC and OAuth2 authentication
 * Easy configuration
 
-### Works With
+##### Works With
 
 * AWS Lambda
 * HTTP Backends
 
-### Use Cases
+##### Use Cases
 
 * Serverless applications
 * Microservices
@@ -123,59 +123,59 @@ Amazon API Gateway supports multiple API types designed for different use cases 
 * Lower pricing
 * Simple setup
 
-### Limitations
+##### Limitations
 
 * Fewer advanced API management features compared to REST API
 
 ---
 
-## 2. WebSocket API
+#### 2. WebSocket API
 
-### Definition
+##### Definition
 
 * WebSocket APIs provide persistent, two-way communication between client and server.
 * Used for real-time applications.
 
-### Features
+##### Features
 
 * Full-duplex communication
 * Persistent connections
 * Real-time messaging
 
-### Works With
+##### Works With
 
 * AWS Lambda
 * HTTP Backends
 * AWS Services
 
-### Use Cases
+##### Use Cases
 
 * Chat applications
 * Live dashboards
 * Gaming applications
 * Real-time notifications
 
-### Advantages
+##### Advantages
 
 * Real-time communication
 * Low latency updates
 * Efficient persistent connection handling
 
-### Limitations
+##### Limitations
 
 * More complex connection management
 * Not suitable for traditional request-response APIs
 
 ---
 
-## 3. REST API
+#### 3. REST API
 
-### Definition
+##### Definition
 
 * REST API provides complete API management capabilities.
 * Offers full control over request processing, response transformation, security, throttling, and caching.
 
-### Features
+##### Features
 
 * Advanced API management
 * Request validation
@@ -184,26 +184,26 @@ Amazon API Gateway supports multiple API types designed for different use cases 
 * Usage plans
 * Caching support
 
-### Works With
+##### Works With
 
 * AWS Lambda
 * HTTP Backends
 * AWS Services
 
-### Use Cases
+##### Use Cases
 
 * Enterprise APIs
 * Complex API architectures
 * Public APIs
 * APIs requiring advanced security and transformations
 
-### Advantages
+##### Advantages
 
 * Rich feature set
 * Full request/response control
 * Better enterprise support
 
-### Limitations
+##### Limitations
 
 * Higher cost
 * Slightly higher latency
@@ -211,44 +211,44 @@ Amazon API Gateway supports multiple API types designed for different use cases 
 
 ---
 
-## 4. REST API Private
+#### 4. REST API Private
 
-### Definition
+##### Definition
 
 * REST API Private is accessible only from within a VPC.
 * Uses VPC endpoints and AWS PrivateLink.
 
-### Features
+##### Features
 
 * Private network access
 * Internal API communication
 * Enhanced security
 
-### Works With
+##### Works With
 
 * AWS Lambda
 * HTTP Backends
 * AWS Services
 
-### Use Cases
+##### Use Cases
 
 * Internal enterprise APIs
 * Banking systems
 * Internal microservices
 * Secure backend communication
 
-### Advantages
+##### Advantages
 
 * Highly secure
 * No public internet exposure
 * Internal-only access
 
-### Limitations
+##### Limitations
 
 * Requires VPC configuration
 * Not publicly accessible
 
-# Comparison of API Types
+### Comparison of API Types
 
 | Feature                | HTTP API         | WebSocket API         | REST API         | REST API Private |
 | ---------------------- | ---------------- | --------------------- | ---------------- | ---------------- |
@@ -263,7 +263,7 @@ Amazon API Gateway supports multiple API types designed for different use cases 
 | Authentication Support | OIDC/OAuth2      | Custom                | Advanced         | Advanced         |
 
 
-# Which API Type Should You Use?
+### Which API Type Should You Use?
 
 | Scenario               | Recommended API  |
 | ---------------------- | ---------------- |
@@ -287,7 +287,7 @@ There are mainly 3 endpoint types:
 
 ---
 
-# 1. Regional Endpoint
+### 1. Regional Endpoint
 
 ### Definition
 
@@ -332,7 +332,7 @@ https://abcd123.execute-api.us-east-1.amazonaws.com
 
 ---
 
-# 2. Edge-Optimized Endpoint
+### 2. Edge-Optimized Endpoint
 
 ### Definition
 
@@ -367,11 +367,10 @@ Client → CloudFront Edge Location → API Gateway → Backend
 
 * Slightly higher cost
 * Less control over CloudFront behavior
-* Additional latency for users very close to the region sometimes
 
 ---
 
-# 3. Private Endpoint
+### 3. Private Endpoint
 
 ### Definition
 
@@ -410,7 +409,7 @@ Internal Client → VPC Endpoint → Private API Gateway → Backend
 * More networking setup required
 
 
-# Comparison of API Endpoint Types
+### Comparison of API Endpoint Types
 
 | Feature             | Regional           | Edge-Optimized   | Private                |
 | ------------------- | ------------------ | ---------------- | ---------------------- |
@@ -423,7 +422,7 @@ Internal Client → VPC Endpoint → Private API Gateway → Backend
 | VPC Support         | Optional           | Optional         | Required               |
 | Cost                | Lower              | Higher           | Moderate               |
 
-# Which Endpoint Type Should You Choose?
+### Which Endpoint Type Should You Choose?
 
 | Scenario                          | Recommended Endpoint |
 | --------------------------------- | -------------------- |
