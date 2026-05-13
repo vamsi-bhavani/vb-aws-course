@@ -13,7 +13,7 @@
 Username: murali
 ```
 
-### Step 1.1: Login to the AWS Console using moole user
+### Step 1.1: Login to the AWS Console using murali user
 ```xml
 UserName: murali
 ```
@@ -63,7 +63,7 @@ aws configure --profile infra
 
 ### Step 9: Connect to the EKS cluster using the command below
 ```bash
-aws eks update-kubeconfig --name dev-cluster --region us-east-1 --profile infra
+aws eks update-kubeconfig --name infra-cluster --region us-east-1 --profile infra
 ```
 
 #### Congratulations: You have successfully created the AWS EKS Cluster.
