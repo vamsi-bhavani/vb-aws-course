@@ -10,12 +10,12 @@
 
 ### Step 1: Create the IAM user and provide Admin Access
 ```xml
-Username: moole
+Username: murali
 ```
 
 ### Step 1.1: Login to the AWS Console using moole user
 ```xml
-UserName: moole
+UserName: murali
 ```
 
 ### Step 2: Create the VPC and 2 public subnets
