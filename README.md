@@ -53,7 +53,6 @@
 ## Day 4: AWS EBS Snapshot
 
 - What is a Snapshot in AWS?
-- Lab Session - Creation of a snapshot from an EC2 instance
 - Lab Session - Creation of a snapshot from an EBS volume
 - Lab Session - Creation of an AWS AMI from a snapshot
 - Lab Session - Creation of an EBS volume from a snapshot
@@ -94,30 +93,7 @@
 - Lab Session - Enabling CloudWatch monitoring in an ASG
 - Lab Session - Deletion of an ASG
 
-## Day 7: AWS ELB (Elastic Load Balancing)
-
-- What is AWS Elastic Load Balancing?
-- Benefits of AWS Elastic Load Balancing
-- What is an AWS Classic Load Balancer?
-- Features of a Classic Load Balancer
-- Lab Session - Creation of an AWS Classic Load Balancer
-- Lab Session - Deletion of a Classic Load Balancer
-- What is an AWS Target Group?
-- What is a Listener?
-- Lab Session - Creation of an AWS Target Group
-- What is an AWS Application Load Balancer?
-- Benefits of an AWS Application Load Balancer
-- Lab Session - Creation of an Application Load Balancer
-- Lab Session - Attaching an ALB to a new Auto Scaling group
-- Lab Session - Deletion of an ALB
-- What is an AWS Network Load Balancer?
-- Benefits of an AWS Network Load Balancer
-- Lab Session - Creation of an AWS Network Load Balancer
-- Lab Session - Deletion of an NLB
-- Difference between an ALB and an NLB
-- Lab Session - Attaching an NLB  to an Auto Scaling group
-
-## Day 8: AWS S3 (Simple Storage Service)
+## Day 7: AWS S3 (Simple Storage Service)
 
 - What is AWS Simple Storage Service (S3)?
 - Buckets and Objects in Amazon S3
@@ -129,13 +105,12 @@
 - Bucket Policy in Amazon S3
 - Working with the Bucket Policy for S3 bucket
 - S3 Bucket Lifecycle
-- Hosting a static website using Amazon S3
 - Presigned URLs in AWS S3
 - Lab Session - Working with Presigned URLs in AWS S3
 - Server-side encryption for Amazon S3 buckets
 - Lab Session - Delete an S3 bucket
 
-## Day 9: AWS VPC (Virtual Private Cloud) Part 1
+## Day 8: AWS VPC (Virtual Private Cloud) Part 1
 
 - What is AWS VPC (Virtual Private Cloud)?
 - Key features of AWS VPC
@@ -153,11 +128,10 @@
 - Lab Session - Create a customized VPC in AWS
 - NAT Gateway and NAT Instance in AWS VPC
 - Differences between NAT Gateway and NAT Instance
-- Lab Session - Create a NAT Instance in AWS VPC
 - Lab Session - Create a NAT Gateway in AWS VPC
 - Lab Session - Delete a NAT Gateway in AWS VPC
 
-## Day 10: AWS VPC (Virtual Private Cloud) Part 2
+## Day 9: AWS VPC (Virtual Private Cloud) Part 2
 
 - Network Access Control List (NACL) in AWS VPC
 - Lab Session - Create a Network Access Control List (NACL) in AWS VPC
@@ -167,7 +141,7 @@
 - VPC Flow Logs and how to create them
 - Lab Session - Enable VPC Flow Logs
 
-## Day 11: AWS VPC (Virtual Private Cloud) Part 3
+## Day 10: AWS VPC (Virtual Private Cloud) Part 3
 
 - Options for configuring an AWS VPC
 - DHCP Option Set in AWS VPC
@@ -179,19 +153,38 @@
 - Lab Session - Create an ENI in AWS
 - Lab Session - Delete an AWS VPC
 
-## Day 12: AWS VPC Peering
+## Day 11: AWS VPC Peering
 
 - What is VPC Peering?
-- Key aspects of VPC Peering
 - Types of VPC Peering
 - Lab Session - Intra-region VPC peering within the same AWS account
-- Lab Session - Delete intra-region VPC peering within the same AWS account
 - Lab Session - Establish intra-region VPC peering with a different AWS account
-- Lab Session - Terminate intra-region VPC peering with a different AWS account
 - Lab Session - Inter-region VPC peering within the same AWS account
-- Lab Session - Remove inter-region VPC peering within the same AWS account
 - Lab Session - Configure inter-region VPC peering with a different AWS account
-- Lab Session - Remove inter-region VPC peering with a different AWS account
+
+## Day 12: AWS ELB (Elastic Load Balancing)
+
+- What is AWS Elastic Load Balancing?
+- Benefits of AWS Elastic Load Balancing
+- What is an AWS Classic Load Balancer?
+- Features of a Classic Load Balancer
+- Lab Session - Creation of an AWS Classic Load Balancer
+- Lab Session - Deletion of a Classic Load Balancer
+- What is an AWS Target Group?
+- What is a Listener?
+- Lab Session - Creation of an AWS Target Group
+- What is an AWS Application Load Balancer?
+- Benefits of an AWS Application Load Balancer
+- Lab Session - Creation of an Application Load Balancer
+- Lab Session - Attaching an ALB to a new Auto Scaling group
+- Lab Session - Attaching an ALB to an Existing Auto Scaling Group
+- Lab Session - Deletion of an ALB
+- What is an AWS Network Load Balancer?
+- Benefits of an AWS Network Load Balancer
+- Lab Session - Creation of an AWS Network Load Balancer
+- Lab Session - Deletion of an NLB
+- Difference between an ALB and an NLB
+- Lab Session - Attaching an NLB  to an Auto Scaling group
 
 ## Day 13: AWS CloudWatch
 
@@ -199,7 +192,6 @@
 - Key Features of CloudWatch
 - Lab Session - Creating a log group in AWS CloudWatch
 - Lab Session - Sending VPC Flow logs to a CloudWatch log group
-- Lab Session - Setting up a CloudWatch alarm for an EC2 Instance
 
 ## Day 14: AWS CloudTrail
 
@@ -214,8 +206,9 @@
 - Types of Repositories
 - Components of Amazon ECR
 - Features of Amazon ECR
-- Lab Session - Creating an ECR repository in AWS
+- Lab Session - Creating an ECR private repository in AWS
 - Lab Session - Pushing a docker image to AWS ECR
+- Lab Session - Creating an ECR public  repository in AWS
 - Lab Session - Setting up Lifecycle Policy in ECR
 - Lab Session - Setting up Replication configuration in ECR
 
@@ -223,13 +216,10 @@
 
 - What is Amazon Elastic Kubernetes Service?
 - How does Amazon EKS work?
-- Lab Session - Installation of AWS CLI in Windows
 - Lab Session - Installation of kubectl in Linux
 - Lab Session - Installation of kubectl in Windows
-- Lab Session - Creating an AWS IAM User
 - Lab Session - Creating an EKS Cluster through the AWS Console
 - Lab Session - Connecting to the EKS cluster
-- Lab Session - Deploying a sample application in Kubernetes
 
 ## Day 17: AWS KMS
 
@@ -303,10 +293,6 @@
 - Working with SSM Agent
 - What is Parameter Store?
 - Creating the Parameter Store
-- What is Run Command?
-- Setting up Run Command
-- What is Patch Manager?
-- Working with Patch Manager
 - What is Secret Manager?
 - Working with Secret Manager
 
@@ -316,7 +302,10 @@
 - Overview of AWS Pricing
 - Basic Navigation and Interface
 - Cost Estimation for EC2 Instances, EBS, RDS
-- Practical Exercises with Different Instance Types
+- Request to create an S3 bucket in the S3 Standard storage class in the us-east-1 region.
+- Request to create an Windows Server with SQL Server Standard in the us-east-1 region.
+- Request to Create Amazon RDS for MySQL Instance in us-east-1 Region
+- Request to Add 100 GB EBS Volume to Prod Windows DB Server
 
 ## Day 25: AWS Billing and Cost Management
 
@@ -335,23 +324,29 @@
 
 - What is AWS API Gateway
 - What is the usage of AWS API Gateway
+- Types of APIs in AWS API Gateway
+- API Endpoint Types in AWS API Gateway
 - Creation of AWS API Gateway
 
 ## Day 28: AWS DynamoDB
 
-- What is AWS DynamoDB
+- What is NoSQL Database?
+-  What is AWS DynamoDB
 - Why do we use the DynamoDB?
+- Limitations of DynamoDB
+- Difference between DynamoDB vs RDS
 - Creation of DynamoDB Tables
 
 ## Day 29: AWS SQS
 
 - What is SQS?
+- Why Do We Need SQS?
+- Features of AWS SQS
 - Types of Queues in SQS
 - What is the difference between Standard Queue and FIFO Queue in SQS?
-- Creation of AWS SQS
+- Creation of Standard SQS Queue
 
 ## Day 30: On-Premises to AWS Migration Process
-- What is On-Premises
 - End-to-End Cloud Migration Plan from On-Premises to AWS
 
 # Conclusion
