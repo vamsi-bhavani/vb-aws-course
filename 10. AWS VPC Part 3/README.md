@@ -210,7 +210,7 @@ There are two types of VPC endpoints:
 
 #### Example
 ```plaintext
-Name: MyPrefixList
+Name: DevOpsByMurali
 Description: List of allowed IP ranges
 Max entries: 10
 CIDR blocks:
@@ -235,7 +235,7 @@ CIDR blocks:
 ```plaintext
 Route Table ID: rtb-12345678
 Routes:
-- Destination: MyPrefixList (pl-12345678)
+- Destination: DevOpsByMurali (pl-12345678)
   Target: igw-12345678
 ```
 
@@ -255,10 +255,10 @@ Routes:
 ```plaintext
 Security Group ID: sg-12345678
 Inbound Rules:
-- Type: SSH
+- Type: HTTPS
   Protocol: TCP
-  Port range: 22
-  Source: MyPrefixList (pl-12345678)
+  Port range: 443
+  Source: DevOpsByMurali (pl-12345678)
 ```
 ----
 ### Elastic Network Interface (ENI) in AWS
