@@ -138,7 +138,7 @@ Configuring an AWS Virtual Private Cloud (VPC) involves several options and feat
 - **DNS Hostnames**: Enable DNS hostnames to assign a DNS name to EC2 instances.
 - **DNS Resolution**: Allow or disable DNS resolution within your VPC. If enabled, instances can use AWS provided DNS servers.
 ----
-### VPC Endpoints in AWS and Types Available
+### VPC Endpoints in AWS and Types of VPC Endpoints
 
 An **AWS VPC Endpoints** allow you to privately connect your VPC to supported AWS services without requiring an internet gateway, NAT devices, VPN connection, or AWS Direct Connect.
 
